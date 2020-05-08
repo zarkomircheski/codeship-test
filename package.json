@@ -50,7 +50,7 @@
     "gulp-terser": "^1.2.0",
     "gulp-util": "^3.0.8",
     "gulp-wp-cache-bust": "^1.0.8",
-    "jquery": "^3.3.1",
+    "jquery": "^3.5.0",
     "node-bourbon": "^4.2.8",
     "prettier": "^1.12.1",
     "randomstring": "^1.1.5",
