@@ -1,0 +1,62 @@
+.page-404 {
+  background: url(../../images/404-bg.png) center;
+  background-size: cover;
+  margin: 0 auto;
+  padding: 0 3.5%;
+  max-width: 1000px;
+  color: $white;
+  min-height: 404px;
+  @include freight(18px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  &__title {
+    @include marr-sans(85px);
+    letter-spacing: 0.01em;
+    color: $white;
+    margin-bottom: 20px;
+    @media (max-width: 600px) {
+      font-size: 65px;
+    }
+  }
+  &__subtitle {
+    @include freight-italic(28px);
+    line-height: 1.25;
+    color: $white;
+    margin-bottom: 10px;
+    @media (max-width: 600px) {
+      font-size: 21px;
+
+    }
+  }
+  p {
+    line-height: 1.25;
+    font-size: 22px;
+    max-width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    @media (max-width: 600px) {
+      font-size: 16px;
+      max-width: 100%
+    }
+  }
+  &__button {
+    @include marr-sans(20px);
+    letter-spacing: 0.01em;
+      border: 2px solid $white;
+      padding: 10px 20px;
+      display: block;
+      max-width: 250px;
+      text-transform: uppercase;
+      margin: 0 auto;
+      position: relative;
+    &:after {
+      content: '\2192';
+      color: $white;
+      font-size: 25px;
+      font-weight: 100;
+      position: relative;
+      line-height: .5;
+    }
+  }
+}

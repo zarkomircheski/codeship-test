@@ -1,0 +1,31 @@
+/**
+ *  ===========  RIGHT RAIL  ===========
+ */
+.right-rail {
+  margin-bottom: 40px;
+
+  &__heading {
+    font: 20px/24px $secondary-font-family;
+    font-weight: 400;
+    margin-bottom: 30px;
+    padding-bottom: 5px;
+    text-transform: capitalize;
+    border-bottom: 1px solid #f1f1f2;
+    color: #3f3f3f;
+    text-align: left;
+    &:after {
+      content: none;
+    }
+  } // .right-rail__heading
+
+
+  &__side-post {
+    overflow: hidden;
+    margin: 0 0 25px;
+    display: block;
+
+  } // .right-rail__side-post
+
+} // .right-rail
+
+

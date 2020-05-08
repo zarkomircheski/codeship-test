@@ -1,0 +1,25 @@
+progress {
+  width: 100%;
+  height: 4px;
+  border: none;
+  background-color: transparent;
+  color: $fth-red;
+  display: block;
+
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+
+  &::-moz-progress-bar {
+    background: $fth-red;
+  }
+  &::-webkit-progress-bar {
+    background: transparent;
+  }
+  &::-webkit-progress-value {
+    background: $fth-red;
+  }
+  &::-ms-fill {
+    background: $fth-red;
+  }
+}

@@ -1,0 +1,153 @@
+.hero-header {
+	color: #3f3f3f;
+	position: relative;
+	display: block;
+	margin-bottom: 50px;
+	@media screen and (max-width: $break-tablet) {
+		margin-bottom: 0;
+	}
+	&__image-container {
+		background-color: $white;
+		margin: 0;
+		position: relative;
+		z-index: 10;
+	}
+	&__hero-image {
+		background-position: center center;
+		background-size: cover;
+		height: 521px;
+		position: relative;
+		width: 100%;
+		max-width: 1400px;
+		margin: 0 auto;
+		overflow: hidden;
+		@media screen and (max-width: $break-tablet) {
+			height: auto;					  
+		}
+		img {
+			width: 100%;
+		}
+		&--video {
+			max-width: 1200px;
+			height: auto;
+		}
+	}
+	&__hero-photo-credit {
+		text-align: right;
+		font: 15px / 18px $tertiary-font-family;
+		margin: 10px 10px 0;
+		display: block;
+		color: $medium-gray;
+		a {
+			color: $medium-gray;
+		}
+	}
+	&__hero-caption {
+		position: absolute;
+		top: 10px;
+		right: 10px;
+		padding: 4px 10px;
+		font: 10px/14px $tertiary-font-family;
+		color: $gallery;
+		opacity: 1;
+		text-transform: uppercase;
+		text-shadow: 1px 1px 0px rgba(0,0,0,0.3);
+		letter-spacing: 1px;
+		&:hover {
+			opacity: 1;
+		}
+		a {
+			color: #FFF;
+		}
+		@media screen and (min-width: $break-large) {
+			top: auto;
+			bottom: 10px;
+		}
+	}
+	&__title-block {
+		background: #fff;
+		margin: -135px auto 0;
+		max-width: 710px;
+		padding: 20px 30px;
+		text-align: center;
+		width: 90%;	
+		position: absolute;
+		left: 50%;
+		bottom: -50px;
+		z-index: 100;
+		border-top: 2px solid $primary-color;
+		transform: translateX(-50%);
+		@media screen and (max-width: $break-tablet) {
+			margin: -35px auto 0;
+			position: relative;
+			left: 0;
+			bottom: 0;
+			transform: none;
+			box-shadow: 0 2px 5px rgba(0,0,0,0.1);	
+			padding: 10px 20px 30px;
+			&--article {
+				box-shadow: none;
+			}
+		}				
+	}	
+	&__post-excerpt {
+		font: 18px/24px $secondary-font-family;
+		font-style: italic;
+		font-weight: 400;
+		margin: 10px 0 0;		
+	}
+	&__post-title {
+		font: 30px/38px $secondary-font-family;
+		font-weight: 400;
+		@media screen and (max-width: $break-tablet) {    
+			font-size: 24px;
+			line-height: 28px;
+			padding: 10px 0 5px;
+		}				
+	}
+	&__post-meta {
+	    margin: 20px 0 0;		
+	}
+	&__author {
+		font: 11px/30px $primary-font-family;
+		text-transform: uppercase;
+		color: #999;	
+		a {
+			color: #999;
+		}	
+	}
+	&__date {
+		font: 11px/30px $primary-font-family;
+		text-transform: uppercase;
+		color: #999;
+		margin-left: 10px;
+		border-left: 1px solid #DDD;
+		padding-left: 10px;		
+	}
+	&__sponsor-link {
+		img {
+			width: auto;
+			max-height: 40px;
+			margin: 5px auto 15px;			
+		}
+	}
+	&__sponsor-name {
+		font: 18px/24px serif;
+		font-style: italic;
+		font-weight: 400;
+		margin: 10px 0 0;			
+	}
+}
+
+body.single {
+	.hero-header__post-meta {
+		@media screen and (max-width: $break-tablet) {
+			margin: 0;
+		}
+	}
+	.hero-header__title-block {
+		@media screen and (max-width: $break-tablet) {
+			padding: 10px 20px 5px;
+		}
+	}
+}

@@ -1,0 +1,41 @@
+.recirculation {
+  margin: 0 auto 20px auto;
+  max-width: 500px;
+
+  @media (max-width: $break-small) {
+    max-width: calc(100% - 60px);
+  }
+
+  &-title {
+    @include marr-sans(22px);
+    color: $fth-red;
+  }
+
+  &-content {
+    margin: 0 auto;
+
+    &-item {
+      display: flex;
+      margin-top: 15px;
+
+      &-image {
+        max-width: 60px;
+      }
+
+      &-title {
+        @include freight-bold(18px);
+        margin-left: 10px;
+        align-self: center;
+        max-width: calc(100% - 70px);
+      }
+    }
+  }
+
+  &-outbrain {
+    min-height: 1px;
+  }
+
+  &.mobile {
+    display: none;
+  }
+}

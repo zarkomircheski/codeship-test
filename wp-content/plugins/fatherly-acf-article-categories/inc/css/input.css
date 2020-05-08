@@ -1,0 +1,18 @@
+.fatherly-category-div #category-tabs li:last-of-type {
+  display: inline;
+}
+
+.fatherly-category-div .wpseo-make-primary-term {
+  display: none;
+  visibility: hidden;
+} 
+
+#categorydiv {
+  display:none;
+}
+/* , .fatherly-category-div .wpseo-is-primary-term
+*/
+.acf-field-article-categories span.acf-required {
+  display: none;
+  visibility: hidden;
+}

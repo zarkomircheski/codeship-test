@@ -1,0 +1,141 @@
+@mixin font-smoothing() {
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@font-face {
+  font-family: 'FreightTextProBook';
+  font-display: swap;
+  src: url('../../fonts/FreightTextProBook.eot');
+  src: url('../../fonts/FreightTextProBook.eot?#iefix')
+      format('embedded-opentype'),
+    url('../../fonts/FreightTextProBook.woff2') format('woff2'),
+    url('../../fonts/FreightTextProBook.woff') format('woff'),
+    url('../../fonts/FreightTextProBook.ttf') format('truetype');
+}
+
+@mixin freight($size, $line_height: '') {
+  @if $line_height == '' {
+    $line_height: $size;
+  }
+  font-family: 'FreightTextProBook', serif;
+  font-size: $size;
+  line-height: $line_height;
+  letter-spacing: -.025em;
+  @include font-smoothing;
+}
+
+@font-face {
+  font-family: 'FreightTextProBookItalic';
+  font-display: swap;
+  src: url('../../fonts/FreightTextProBookItalic.eot');
+  src: url('../../fonts/FreightTextProBookItalic.eot?#iefix')
+      format('embedded-opentype'),
+    url('../../fonts/FreightTextProBookItalic.woff2') format('woff2'),
+    url('../../fonts/FreightTextProBookItalic.woff') format('woff'),
+    url('../../fonts/FreightTextProBookItalic.ttf') format('truetype');
+}
+
+@mixin freight-italic($size, $line_height: '') {
+  @if $line_height == '' {
+    $line_height: $size;
+  }
+  font-family: 'FreightTextProBookItalic', serif;
+  font-size: $size;
+  line-height: $line_height;
+  letter-spacing: -.025em;
+  @include font-smoothing;
+}
+
+@font-face {
+  font-family: 'FreightTextProBold';
+  font-display: swap;
+  src: url('../../fonts/FreightTextProBold.eot');
+  src: url('../../fonts/FreightTextProBold.eot?#iefix')
+      format('embedded-opentype'),
+    url('../../fonts/FreightTextProBold.woff2') format('woff2'),
+    url('../../fonts/FreightTextProBold.woff') format('woff'),
+    url('../../fonts/FreightTextProBold.ttf') format('truetype');
+}
+
+@mixin freight-bold($size, $line_height: '') {
+  @if $line_height == '' {
+    $line_height: $size;
+  }
+  font-family: 'FreightTextProBold', serif;
+  font-size: $size;
+  line-height: $line_height;
+  letter-spacing: -.025em;
+  @include font-smoothing;
+}
+
+@font-face {
+  font-family: 'FreightTextProBoldItalic';
+  font-display: swap;
+  src: url('../../fonts/FreightTextProBoldItalic.eot');
+  src: url('../../fonts/FreightTextProBoldItalic.eot?#iefix')
+      format('embedded-opentype'),
+    url('../../fonts/FreightTextProBoldItalic.woff2') format('woff2'),
+    url('../../fonts/FreightTextProBoldItalic.woff') format('woff'),
+    url('../../fonts/FreightTextProBoldItalic.ttf') format('truetype');
+}
+
+@mixin freight-bold-italic($size, $line_height: '') {
+  @if $line_height == '' {
+    $line_height: $size;
+  }
+  font-family: 'FreightTextProBoldItalic', serif;
+  font-size: $size;
+  line-height: $line_height;
+  @include font-smoothing;
+}
+
+@font-face {
+  font-family: 'MarrSansCondensed-Bold-Web';
+  font-display: swap;
+  src: url('../../fonts/MarrSansCondensed-Bold-Web.eot');
+  src: url('../../fonts/MarrSansCondensed-Bold-Web.eot?#iefix')
+      format('embedded-opentype'),
+    url('../../fonts/MarrSansCondensed-Bold-Web.woff2') format('woff2'),
+    url('../../fonts/MarrSansCondensed-Bold-Web.woff') format('woff');
+}
+
+@mixin marr-sans($size, $line_height: '') {
+  @if $line_height == '' {
+    $line_height: $size;
+  }
+  font-family: 'MarrSansCondensed-Bold-Web', sans-serif;
+  font-size: $size;
+  line-height: $line_height;
+  @include font-smoothing;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'MarrSansCondensed-BoldItalic-Web';
+  font-display: swap;
+  src: url('../../fonts/MarrSansCondensed-BoldItalic-Web.eot');
+  src: url('../../fonts/MarrSansCondensed-BoldItalic-Web.eot?#iefix')
+      format('embedded-opentype'),
+    url('../../fonts/MarrSansCondensed-BoldItalic-Web.woff2') format('woff2'),
+    url('../../fonts/MarrSansCondensed-BoldItalic-Web.woff') format('woff');
+}
+
+@mixin marr-sans-italic($size, $line_height: '') {
+  @if $line_height == '' {
+    $line_height: $size;
+  }
+  font-family: 'MarrSansCondensed-BoldItalic-Web', sans-serif;
+  font-size: $size;
+  line-height: $line_height;
+  @include font-smoothing;
+}
+
+@mixin helvetica($size, $line_height: '') {
+  @if $line_height == '' {$line_height: $size;}
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: $size;
+  line-height: $line_height;
+  @include font-smoothing;
+}

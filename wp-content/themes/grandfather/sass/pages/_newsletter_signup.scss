@@ -1,0 +1,348 @@
+body.single-newsletter_signup {
+  background-color: $footer-blue;
+
+  &, body.page-template-page-signup-confirmation {
+    background-size: 100%;
+    background-repeat: no-repeat;
+
+    @media screen and (max-width: $break-1000) {
+      background-size: cover;
+      background-position: center -100px;
+    }
+    .login-custom {
+      padding: 100px 0 150px;
+      height: auto;
+      @media screen and (max-width: $break-tablet) {
+        padding: 20px 0;
+      }
+      &__title {
+        float: none;
+        letter-spacing: 1.5px;
+        color: #FFF;
+        border: none;
+        margin-left: auto;
+        margin-bottom: 40px;
+        line-height: 48px;
+        text-transform: none;
+        width: 90%;
+        @media screen and (max-width: $break-tablet) {
+          float: none;
+          text-align: center;
+          font-size: 24px;
+          line-height: 28px;
+        }
+        @media (max-width: 850px) {
+          margin-right: auto;
+        }
+
+        h1, h2, h3, h4, h5, h6, p, span {
+          color: $white;
+          border: none;
+        }
+      }
+      &__logo {
+        width: 200px;
+        display: block;
+        margin-top: 20px;
+        @media screen and (max-width: $break-tablet) {
+          margin: 20px auto;
+        }
+      }
+      &__form {
+        float: none;
+        @media screen and (max-width: $break-tablet) {
+          float: none;
+          margin-top: 40px;
+        }
+        input {
+          @include placeholder {
+            color: $dark-gray;
+          }
+        }
+      }
+      .tml-registration-confirmation {
+        color: #FFF;
+        font-weight: bold;
+        @media screen and (max-width: $break-tablet) {
+          color: #FFF;
+        }
+      }
+      .form {
+        h3 {
+          font-weight: bold;
+          margin-top: 20px;
+        }
+        .tml-action-links {
+          display: block;
+          text-align: center;
+          li {
+            float: none;
+          }
+          a {
+            color: #FFF;
+            font-size: 14px;
+            text-align: center;
+            @media screen and (max-width: $break-tablet) {
+              color: #999;
+            }
+          }
+        }
+        .fb-login-btn {
+          span {
+            position: relative;
+            text-shadow: none;
+            font-size: 14px;
+            line-height: 32px;
+            letter-spacing: 2px;
+            margin-left: 30px;
+            color: #FFF;
+            opacity: 1;
+            display: block;
+            font-weight: bold;
+            margin: 0;
+          }
+          .fa {
+            font-size: 20px;
+            text-shadow: none;
+            position: relative;
+            line-height: 24px;
+            margin-left: 5px;
+            top: 2px;
+          }
+        }
+      }
+      .tml-user-email-error {
+        font-size: 14px;
+        font-weight: bold;
+        text-align: center;
+        display: block;
+      }
+    }
+    .calls-to-action__newsletter {
+      border: none;
+    }
+    section.page-template {
+      h1 {
+        @include marr-sans(40px);
+        margin-bottom: 15px;
+
+        @media (min-width: $break-small) {
+          font-size: 56px;
+          line-height: 56px;
+        }
+
+        a {
+          color: $dark-gray;
+
+          &:hover {
+            color: #222;
+          }
+        }
+        p, ol, ul, h2, h3, h4, h5, h6 {
+          margin: 0 28px 20px;
+        }
+
+      }
+      h2, h3, h4, h5, h6 {
+        font-family: 'MarrSansCondensed-Bold-Web', sans-serif;
+      }
+      p {
+        @include freight(20px, 30px);
+        letter-spacing: 0.3px;
+
+        strong {
+          @include freight-bold(22px, 30px);
+        }
+
+        em {
+          @include freight-italic(22px, 30px);
+        }
+      }
+
+    }
+
+    .newsletter--signup-landing {
+      &-wrapper {
+        display: flex;
+        margin: 0 auto;
+        max-width: 1100px;
+
+        @media (max-width: 850px) {
+          flex-direction: column;
+        }
+      }
+
+      &-content {
+        max-width: 730px;
+
+        @media (max-width: $break-1000) {
+          margin-top: 0;
+        }
+
+        @media (max-width: 850px) {
+          margin: 0 auto;
+        }
+      }
+
+      &-link {
+        color: $white;
+        font-size: 14px;
+        text-decoration: underline;
+        margin-left: 80px;
+      }
+
+      &-phone {
+        max-width: 280px;
+        margin: 0 50px;
+
+        @media (max-width: 850px) {
+          margin: 0 auto;
+        }
+      }
+
+      &-form {
+        padding-top: 40px;
+        color: $white;
+
+        .email-submit-success {
+          text-align: center;
+          font-size: 24px;
+        }
+      }
+
+      &.from-newsletter {
+        .newsletter--signup-landing {
+          &-content {
+            max-width: 1000px;
+            width: 100%;
+            margin: 0 auto;
+          }
+
+          &-phone {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+.newsletter__mobile {
+  display: none;
+  bottom: 0;
+  width: 100%;
+  z-index: 100;
+  padding: 0;
+
+  &.show {
+    display: block;
+  }
+
+
+  .newsletter__wrapper {
+    width: 100%;
+    min-height: 251px;
+    background-color: white;
+    padding: 4em 0 0;
+    position: relative
+  }
+
+
+  .inline-newsletter {
+    &__heading {
+      text-align: center;
+    }
+    &__input-wrap {
+      margin: 0 20px;
+    }
+  }
+}
+
+.newsletter {
+  &__overlay {
+    position: fixed;
+    top: 44px;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0, .5);
+
+    &-button {
+      position: absolute;
+      z-index: 1;
+      top: 251px;
+      right: 0;
+      width: 40px;
+      height: 40px;
+      color: white;
+      background-color: black;
+      font-weight: bold;
+      border: none;
+    }
+
+    &-close {
+      height: 100%;
+    }
+  }
+
+  &__button {
+    @include marr-sans(18px);
+    width: 100%;
+    height: 100%;
+    text-transform: uppercase;
+    background-color: #dc4028;
+    color: $white;
+    display: none;
+    animation: move 5s infinite ease-in-out;
+    
+    &.show {
+      display: block;
+
+      &:after {
+        content:'';
+        top:0;
+        transform:translateX(100%);
+        width:100%;
+        height:220px;
+        position: absolute;
+        z-index:1;
+        animation: slide 15s infinite 10s;
+        background: linear-gradient(to right, rgba(255,255,255,0) 0%,rgba(255,255,255,0.8) 50%,rgba(128,186,232,0) 99%,rgba(125,185,232,0) 100%);
+      }
+    }
+  }
+  /* animation */
+
+  @keyframes slide {
+    0% {transform:translateX(-100%);}
+    10% {transform:translateX(100%);}
+    100% {transform:translateX(100%);}
+  }
+
+  &__close {
+    @include marr-sans(18px);
+    width: 100%;
+    height: 100%;
+    text-transform: uppercase;
+    background-repeat: no-repeat;
+    background-image: url('../../img/email-icon.svg');
+    background-color: #dc4028;
+    color: $white;
+    display: none;
+  }
+}
+
+.mobile-like-button {
+  background-image: url(../../img/thumbs-up-facebook.svg);
+  background-size: 23px;
+  background-repeat: no-repeat;
+  background-position: top 11px right 42px;
+  background-color: #3b5998;
+  text-transform: uppercase;
+  margin: 5px auto 1em;
+  display: none;
+  padding: 8px 50px 8px 47px;
+  width: 330px;
+  color: white;
+  font-family: 'MarrSansCondensed-Bold-Web', sans-serif;
+}

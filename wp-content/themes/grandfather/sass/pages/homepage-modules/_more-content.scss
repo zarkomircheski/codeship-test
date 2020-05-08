@@ -1,0 +1,26 @@
+.more-content {
+  position: relative;
+
+  &-title {
+    @include freight-bold(16px);
+    text-transform: uppercase;
+  }
+
+  &-list {
+    list-style: none;
+    padding-left: 25px;
+
+    li {
+      margin-top: 10px;
+      @include freight-bold-italic(20px);
+      letter-spacing: -0.04em;
+
+      &::before {
+        content: '\25A0';
+        position: absolute;
+        color: $fth-red;
+        left: 0;
+      }
+    }
+  }
+}

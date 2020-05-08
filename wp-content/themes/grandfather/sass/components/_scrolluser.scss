@@ -1,0 +1,13 @@
+.scrolluser {
+  .article-ad, .article__body-rail-ad, .article__footer-ad, .article__footer-ad-mobile, .article__leaderboard, .homepage-leaderboard, .in-article-ad, .newsletter-signup-ad, .recirculation-modules {
+    display: none;
+  }
+
+  .mobile-ad-nav {
+    bottom: 44px;
+  }
+
+  #content {
+    padding-top: 105px;
+  }
+}

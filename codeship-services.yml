@@ -1,0 +1,8 @@
+codeship-example-php:
+  build:
+    image: codeship_build_image
+    context: ./
+    dockerfile: codeship-dockerfile/Dockerfile
+  volumes:
+    - ./:/var/www/
+  cached: true

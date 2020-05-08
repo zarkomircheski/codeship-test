@@ -1,0 +1,26 @@
+.title-container {
+  margin: 40px 10px auto 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  .title-only-sponsor {
+    display: flex;
+    max-width: 250px;
+    margin-left: 3px;
+    align-content: center;
+    font-size: 10px;
+    color: #a6a6a6;
+    font-family: FreightTextProBold;
+
+    span {
+      margin-top: 11px;
+    }
+
+    &-logo {
+      max-width: 100px;
+      margin: 8px 0 0 5px;
+    }
+  }
+}

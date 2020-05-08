@@ -1,0 +1,424 @@
+body.your-profile {
+	.page-template__title {
+		display: none;
+	}
+	h3 {
+		font-weight: bold;
+		text-align: center;
+	}
+	p {
+		text-align: center;
+	}
+	.page-content {
+		@extend .container-xxsm;
+	}
+	br {
+		display: none;
+	}
+}
+.tml-profile {
+	text-align: center;
+	max-width: 100%;
+}
+
+.profile-page {
+	table {
+		width: 100%;
+		margin: 0 auto;
+		font-family: $primary-font-family;
+	}
+
+	.profile-name, .profile-email, .user-child-form {
+		tr, th, td {
+			display: block;
+		}		
+		tr.tml-nickname-wrap, tr.tml-display-name-wrap {
+				display: none;
+		}		
+	}
+	.profile-toolbar {
+		display: none;
+	}
+	.profile-email {
+	    width: 48%;
+	    float: left;
+		margin-right: 2%;	
+		@media screen and (max-width: $break-tablet) {
+			width: 100%;
+			margin-left: 0 !important;
+			margin-right: 0 !important;
+		}
+	}
+	.profile-location {
+		width: 48%;
+		float: left;
+	    margin-left: 2%;
+	    &__invalid-zip-notice {
+			display: none;
+			font-size: 12px;
+			font-weight: 700;
+			color: $primary-color;				    	
+	    }
+		@media screen and (max-width: $break-tablet) {
+			width: 100%;
+			margin-left: 0 !important;
+			margin-right: 0 !important;
+		}	    
+	}
+	.hidden {
+		display: none;
+	}
+	input[type=text] {
+		text-align: center;
+		padding: 10px;
+		box-shadow: none;
+		border: 1px solid #DDD;
+		border-radius: 0;
+		-webkit-appearance: none;
+		-webkit-transition: -webkit-transition, all 0.3s ease-out;
+		-moz-transition: transition, all 0.3s ease-out;
+		-o-transition: transition, all 0.3s ease-out;
+		transition: transition, all 0.3s ease-out;		
+		&:hover {
+			border-color: $primary-color;
+		}
+		&:focus {
+			border-color: $primary-color;			
+		}
+		margin-left: auto;
+		margin-right: auto;
+	}
+	label {
+		font-size: 14px;
+		line-height: 18px;	
+		font-weight: bold;
+		text-align: center;		
+	}
+	.button-alt {
+		background: #FFF;
+		border: 2px solid #e77766;
+		color: #e77766;
+		font-size: 12px;
+		font-weight: 700;
+		display: inline-block;
+		padding: 10px 12px;
+		line-height: 1;
+		text-transform: uppercase;
+		margin-top: 5px;
+		cursor: pointer;	
+	}
+	.tml-first-name-wrap, .tml-last-name-wrap {
+		width: 48%;
+		float: left;
+		margin-bottom: 20px;
+		@media screen and (max-width: $break-tablet) {
+			width: 100%;
+			margin-left: 0 !important;
+			margin-right: 0 !important;
+		}
+	}
+	.tml-first-name-wrap {
+		margin-right: 2%;
+	}
+	.tml-last-name-wrap {
+		margin-left: 2%;
+	}
+	.tml-user-login-wrap {
+		margin-bottom: 20px;
+		.description {
+			font-size: 12px;
+			color: #999;
+			font-weight: bold;
+			display: block;		
+		}		
+	}
+	.tml-user-email-wrap {
+		margin-bottom: 20px;
+		.description {
+			color: #999;
+			font-size: 12px;			
+		}
+	}
+	.tml-submit-wrap {
+		clear: both;
+		margin-top: 20px;
+	}
+	tr.tml-user-login-wrap {
+		display: none !important;
+	}
+	.user-child-form {
+		margin-bottom: 0px;
+		padding: 20px 0;
+		display: block;
+		border-top: 1px solid #DDD;
+		input[type=text]{
+			width: 30%;	
+			display: block;
+			margin-left: auto;		
+			margin-right: auto;		
+			text-align: center;
+			@media screen and (max-width: $break-tablet) {
+				width: 45%;
+			}
+		}
+		&--info-set {
+			display: block;
+			background: #EEE;
+			tbody {
+				display: block;
+			}
+		}
+		&__title {
+			color: #3f3f3f;
+			display: inline-block;
+			border-top: 1px solid $primary-color;			
+		}
+		&__description {
+			font-family: $primary-font-family;
+		}
+		&__trying-label {
+			top: 12px;
+			left: 20px;
+			position: relative;
+			float: left;
+			font-weight: bold;	
+		}
+		&__trying-checkbox {
+		    padding: 28px 0 0;			
+		}
+		&__styled-checkbox {
+			width: 43px;
+			height: 43px;
+			float: left;
+			border: 1px solid #DDD;
+			margin-left: 42%;
+			-webkit-transition: -webkit-transition, all 0.3s ease-out;
+			-moz-transition: transition, all 0.3s ease-out;
+			-o-transition: transition, all 0.3s ease-out;
+			transition: transition, all 0.3s ease-out;					
+			&:hover {
+				border-color: $primary-color;
+			}
+			&:before {
+				display: block;
+				margin: 0 auto;
+				text-align: center;
+				line-height: 41px;				
+			}
+			&--no-padding {
+				padding: 0;				
+			}
+		}
+		&__divider {
+			float: left;
+			font-size: 14px;
+			line-height: 38px;
+			font-weight: bold;
+			color: #999;
+		}
+		tbody {
+			width: 100%;
+			display: block;
+		}
+		tr {
+			position: relative;
+			&.hide {
+				display: none;
+			}
+		}
+		.description {
+			font-size: 12px;
+			color: #999;
+			font-weight: 700;
+			display: block;
+			margin-bottom: 20px;	
+			display: none;		
+		}
+	}
+	.invalid-bday-notice {
+		display: none;
+		font-size: 12px;
+		font-weight: bold;		
+		color: $primary-color;
+		&__visible {
+			display: block;
+		}
+	}
+	.profile-account{
+		&__title {
+			margin-top: 50px;
+			color: #3f3f3f;
+			display: inline-block;
+			border-top: 1px solid $primary-color;			
+		}
+	}
+	.button-primary {
+		margin: 20px auto 0;
+		display: block;
+		font-weight: bold;
+		padding: 25px 50px;
+		letter-spacing: 3px;
+		border-radius: 0;
+		&.disabled {
+			background: #999;
+			color: #333;
+		}		
+	}
+
+	.referrer-form {
+		&__title {
+			margin-top: 50px;
+			color: #3f3f3f;
+			display: inline-block;
+			border-top: 1px solid $primary-color;				
+		}
+		&__image-item{
+			width: 47%;
+			float: left;
+			margin: 0 3% 0 0;
+			&:last-child {
+				margin: 0 0 0 3%;
+			}
+		}
+		&__image {
+			max-width: 100%;
+		}
+		&__user-url {
+			position: relative;
+			margin: 30px 0 0;
+		}
+		&__copy-url {
+			position: absolute;
+			right: 0;
+			margin: 13px 5px;
+			padding: 3px 10px;
+			background: $primary-color;
+			font-weight: 700;
+			text-transform: uppercase;
+			font-size: 10px;
+			color: #FFF;
+			letter-spacing: 1px;
+			z-index: 10;
+			cursor: pointer;			
+		}
+		&__url-input {
+			margin-bottom: 0;
+			text-align: left !important;
+			background: #EEE;
+			color: #999;
+			&:hover {
+				border-color: #DDD;
+			}
+		}
+		&__count {
+			font-size: 16px;
+			text-align: center;
+			padding: 10px;
+			font-weight: bold;
+			color: #999;
+			background: #EEE;
+			margin: 30px 0 0 0;			
+		}
+		&__no-emails{
+			color: #999;
+		}
+		&__invite-list {
+			margin: 30px 0 0;
+		}
+		&__emails {
+			margin: 30px 0 0;
+		}
+		&__email-list {
+			text-align: center;
+		}
+		&__email-input {
+			display: none;
+		}
+		&__email-textarea {
+			padding: 10px;
+			box-shadow: none;
+			border: 1px solid #DDD;
+			height: 80px;
+			transition: transition,all .3s ease-out;			
+		}
+		&__invite-email-address {
+			position: relative;
+			font-size: 14px;
+			line-height: 14px;
+			padding: 10px 15px;
+			font-weight: bold;
+			color: #999;
+			background: #EEE;
+			margin: 10px 10px 0 0;	
+			display: inline-block;			
+			&--new-invite {
+				i {
+					display: block;
+					position: absolute;
+					top: 3px;
+					right: 3px;
+					color: #CCC;
+					font-size: 12px;
+					cursor: pointer;
+					-webkit-transition: -webkit-transition, all 0.3s ease-out;
+					-moz-transition: transition, all 0.3s ease-out;
+					-o-transition: transition, all 0.3s ease-out;
+					transition: transition, all 0.3s ease-out;					
+					&:hover {
+						color: $primary-color;
+					}
+				}
+			}
+		}
+		&__valid-message {
+			display: none;
+			font-size: 12px;
+			font-weight: 700;
+			color: $primary-color;			
+		}
+		&__congrats-message {
+			display: block;
+			font-size: 16px;
+			text-align: center;
+			padding: 10px;
+			font-weight: 700;
+			color: #999;
+			background: $primary-color;
+			margin: 0px 0 20px;
+			color: #FFF;
+		}
+		&__user-email {
+			margin-top: 30px;
+		}
+		&__user-state {
+			width: 48%;
+			margin-right: 2%;
+			float: left;
+
+		}
+		&__user-country-list {
+			width: 48%;
+			margin-left: 2%;
+			float: left;			
+		}
+	}
+}
+.tml {
+	p.message {
+		border-color: rgba($medium-gray, 1);
+		background-color: rgba($light-gray, 1);
+		color: #3f3f3f;
+		font-size: 14px;
+		font-weight: bold;
+		line-height: 21px;
+		letter-spacing: 1px;
+		text-align: center;			
+	}
+	p.error {
+		font-size: 14px;
+		font-weight: bold;
+		line-height: 21px;
+		letter-spacing: 1px;
+		text-align: center;		
+	}
+}

@@ -1,0 +1,16 @@
+.view-more {
+  right: calc((100% - 925px)/2);
+  position: absolute;
+  top: 20px;
+  align-content: right;
+  @include freight-bold(18px);
+  color: $fth-red;
+
+
+  @media (max-width: 1000px) {
+    right: 50px;
+  }
+  @media (max-width: 600px) {
+    position: unset;
+  }
+}

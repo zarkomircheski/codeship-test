@@ -1,0 +1,12 @@
+.homepage-leaderboard {
+  margin: 20px auto auto auto ;
+  padding: 8px 20px 20px 20px;
+  text-align: center;
+  @media (max-width: 600px) {
+    padding: 8px 0 20px 0;
+  }
+
+  .page-template-homepagev2 & {
+    background-color: #EDECE8;
+  }
+}

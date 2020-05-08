@@ -1,0 +1,568 @@
+callout:
+  post_highlight:
+    variants:
+      variant_1:
+        template: 'featured-article'
+        fields:
+          highlighted_post:
+            permalink:
+            featured_image:
+              width: 480
+              height: 480
+              cropType: ''
+            category:
+            author:
+            excerpt:
+            title:
+          title:
+          quote:
+          content_type:
+          logo: "/wp-content/themes/grandfather/images/fatherly-icon.svg"
+          show_arrow: 'no'
+      variant_2:
+        template: 'featured-article'
+        fields:
+          highlighted_post:
+            permalink:
+            featured_image:
+              width: 480
+              height: 480
+              cropType: ''
+            category:
+            author:
+            excerpt:
+            title:
+          title:
+          quote:
+          content_type:
+          logo: "/wp-content/themes/grandfather/images/fatherly-icon.svg"
+      variant_3:
+        template: 'featured-article'
+        fields:
+          highlighted_post:
+            permalink:
+            featured_image:
+              width: 563
+              height: 330
+            category:
+            author:
+            excerpt:
+            title:
+          title:
+          quote:
+          content_type:
+      variant_4:
+        template: 'featured-article'
+        fields:
+          highlighted_post:
+            permalink:
+            featured_image:
+              width: 563
+              height: 330
+            category:
+            author:
+            excerpt:
+            title:
+          title:
+          quote:
+          content_type:
+      variant_5:
+        template: 'featured-article'
+        fields:
+          highlighted_post:
+            permalink:
+            featured_image:
+              width: 480
+              height: 480
+              cropType: ''
+            category:
+            author:
+            excerpt:
+            title:
+          title:
+          quote:
+          content_type:
+  arrow_callout:
+    template: 'callout/arrow-callout'
+    fields:
+      content:
+      custom:
+        show_arrows:
+          acf: 'show_arrows'
+  search_form:
+    template: 'callout/search'
+  navigation:
+    variants:
+      header_nav:
+        template: 'header-nav'
+        fields:
+          image:
+            acf: 'header_nav_banner_image'
+          custom:
+            hide_banner:
+              acf: 'header_nav_hide_banner_image'
+      sponsored_nav:
+        template: 'sponsored-nav'
+        layout: 'full'
+        fields:
+          image:
+            acf: 'sponsored_nav_sponsor_image'
+            width: 200
+            retina: false
+          custom:
+            color:
+              acf: 'sponsored_nav_color'
+            link:
+              acf: 'sponsored_nav_sponsor_link'
+            text_color:
+              acf: 'sponsored_nav_text_color'
+      article_nav:
+          template: 'nav-2017'
+  sponsor_highlight:
+    template: 'callout/sponsor-highlight'
+    fields:
+      custom:
+        sponsor_name:
+          acf: 'sponsor_highlight_sponsor_name'
+        image:
+          acf: 'sponsor_highlight_image'
+        tracking:
+          acf: 'sponsor_highlight_tracking'
+      title:
+        acf: 'sponsor_highlight_title'
+      content:
+        acf: 'sponsor_highlight_content'
+      button:
+        acf: 'sponsor_highlight_link'
+  newsletter_signup:
+    variants:
+      variant_1:
+        template: 'callout/newsletter'
+        fields:
+          content:
+          image:
+      variant_2:
+        template: 'callout/newsletter'
+        fields:
+          content:
+          image:
+  lead_with_video:
+    template: 'callout/lead-with-video'
+    fields:
+      highlighted_posts:
+        permalink:
+        featured_image:
+          width: 300
+          height: 150
+        category:
+        title:
+  ad:
+    template: 'callout/banner-ad'
+    fields:
+      ad_name:
+  in_article_ad:
+    template: 'callout/in-article-ad'
+    fields:
+      ad_name:
+  in_article_amp_ad:
+    template: 'callout/in-article-amp-ad'
+    fields:
+      ad_name:
+  in_article_0:
+    template: 'in_article_0'
+  in_article_amp_0:
+    template: 'callout/in-article-amp-0'
+  in_article_amp_1:
+    template: 'callout/in-article-amp-1'
+  in_article_newsletter:
+    template: 'article-newsletter'
+    fields:
+      newsletter_cta:
+        acf: 'newsletter_cta'
+      specify_list:
+        acf: 'specify_list'
+      list_id:
+        acf: 'list_id'
+  banner_image:
+    template: 'callout/banner-image'
+    fields:
+      image:
+      custom:
+        image_link:
+          acf: 'banner_image_link'
+  more_from:
+    template: 'more-from-on-load'
+    fields:
+      query_args:
+      title:
+      custom:
+        enable_tag:
+          acf: 'more_from_enable_tag'
+  hero:
+    template: 'hero'
+    layout: 'full'
+    fields:
+      title:
+        acf: 'hero_title'
+      image:
+        acf: 'hero_image'
+      button:
+        acf: 'hero_button'
+      content:
+        acf: 'hero_content'
+  title:
+    template: 'callout/title'
+    fields:
+      title:
+    title_sponsor_data:
+      sponsor_logo:
+        acf: 'title_module_sponsor_settings_logo'
+        width: 150
+        retina: false
+      sponsor_link:
+        acf: 'title_module_sponsor_settings_link'
+  franchise_tag_banner:
+    template: 'callout/tag-banner'
+    fields:
+      banner_image:
+      title_image:
+      title_text:
+      title_type:
+  video_highlight:
+    template: 'featured-video'
+    fields:
+      highlighted_post:
+        permalink:
+        featured_image:
+          cropType: ''
+        title:
+        id:
+      title:
+  data_collection:
+    template: 'callout/data-collection'
+    fields:
+      custom:
+        ask_age:
+          acf: 'childs_age'
+        style_format:
+          acf: 'style_format'
+        lead_type:
+          acf: 'lead_type'
+      image:
+        acf: 'image_lead'
+      title:
+        acf: 'text_lead'
+      survey_question:
+        acf: 'add_a_question'
+        fields:
+          cutom:
+            question:
+              acf: 'question'
+              enter_answer:
+              fields:
+                custom:
+                  answer:
+                  acf: 'answer'
+              acf: 'result_page'
+              enter_weights:
+                fields:
+                  custom:
+                    result:
+                      acf: 'pick_result_page'
+                    weight:
+                      acf: 'pick_weight'
+  intro_text:
+    template: 'callout/intro-text'
+    fields:
+      custom:
+        title:
+          acf: 'custom_title'
+        content:
+          acf: 'content'
+  text_overlay:
+    template: 'callout/text-overlay'
+    fields:
+      custom:
+        title:
+          acf: 'overlay_text'
+        image:
+          acf: 'intro_image'
+  free_form:
+    template: 'callout/free-form'
+    fields:
+      content:
+      custom:
+        form_layout:
+          acf: 'form_layout'
+  faq:
+    template: 'callout/faq'
+    fields:
+      title:
+        acf: 'faq_title'
+      add_faq:
+        acf: 'add_faq'
+        fields:
+          custom:
+            title:
+              acf: 'faq_module'
+  related_posts:
+    template: 'callout/related-posts'
+    fields:
+      title:
+        acf: 'related_posts_title'
+      add_related_post:
+        acf: 'add_related_posts'
+        fields:
+          custom:
+            related_story:
+              acf: 'related_story'
+  info_graphic:
+    template: 'callout/info-graphic'
+    fields:
+      title:
+        acf: 'info_graphic_title'
+      img:
+        acf: 'add_info_graphic'
+  experts:
+    template: 'callout/experts'
+    fields:
+      title:
+        acf: 'experts_title'
+      add_experts:
+        acf: 'add_expert'
+        fields:
+          custom:
+            image:
+              acf: 'expert_image'
+            title:
+              acf: 'expert_title'
+            proffession:
+              acf: 'expert_profession'
+            link:
+              acf: 'expert_page_link'
+  glossary:
+    template: 'callout/glossary'
+    fields:
+      title:
+        acf: 'glossary_title'
+      add_glossary_item:
+        acf: 'add_glossary_item'
+        fields:
+          custom:
+            title:
+              acf: 'glossary_item_title'
+            deffinition:
+              acf: 'glossary_item_deffinition'
+  mens_dove_widget:
+      template: 'mens_dove_widget'
+  recirculation:
+    template: 'callout/recirculation'
+    fields:
+      title:
+        acf: 'recirculation_title'
+      custom:
+        type:
+          acf: 'feed_type'
+  video_recirc:
+    template: 'callout/video-recirc'
+    fields:
+      title:
+        acf: 'video_recirc_title'
+section:
+  content_hub:
+    variants:
+      variant_1:
+        template: 'content-hub/parenting'
+        fields:
+          title:
+          sub_categories:
+          main_category:
+          posts:
+            count: 11
+            title:
+            permalink:
+            featured_image:
+              height: 140
+              width: 140
+            category:
+          more_posts:
+            count: 6
+      variant_2:
+        template: 'content-hub/double-with-lead'
+        fields:
+          lead_graphic:
+            width: 330
+            height: 400
+          title:
+          main_category:
+          disable_link:
+           acf: 'disable_link'
+          sub_categories:
+          posts:
+            count: 5
+            title:
+            category:
+            permalink:
+            author:
+            featured_image:
+              width: 300
+              height: 150
+      variant_3:
+        template: 'content-hub/double-row'
+        fields:
+          title:
+          sub_categories:
+          main_category:
+          disable_link:
+            acf: 'disable_link'
+          posts:
+            count: 6
+            title:
+            category:
+            permalink:
+            author:
+            featured_image:
+              width: 300
+              height: 150
+      variant_4:
+        template: 'content-hub/three-items-with-lead'
+        fields:
+          title:
+          sub_categories:
+          main_category:
+          disable_link:
+            acf: 'disable_link'
+          highlighted_posts:
+            title:
+            excerpt:
+            permalink:
+            category:
+            author:
+            featured_image:
+            id:
+          more_posts:
+            count: 3
+      variant_5:
+        template: 'content-hub/double-with-ad'
+        fields:
+          title:
+          sub_categories:
+          main_category:
+          disable_link:
+            acf: 'disable_link'
+          posts:
+            count: 6
+            title:
+            category:
+            permalink:
+            author:
+            featured_image:
+              width: 300
+              height: 150
+  sponsored_content_hub:
+    template: 'content-hub/sponsored-content'
+    fields:
+      title:
+      sponsor_data:
+        sponsor_logo:
+          width: 150
+          retina: false
+        sponsor_link:
+      highlighted_posts:
+        featured_image:
+        title:
+        permalink:
+        category:
+        id:
+  custom_sponsored_content_hub:
+    template: 'content-hub/sponsored-content-custom'
+    fields:
+      title:
+      sponsor_data:
+        sponsor_logo:
+          width: 150
+          retina: false
+        sponsor_link:
+      custom:
+        tracking_code:
+          acf: 'sponsored_hub_tracking_code'
+      sponsored_posts:
+        acf: 'custom_sponsored_content_hub_settings'
+        fields:
+          sponsored_post:
+            acf: 'sponsored_post'
+            fields:
+              featured_image:
+              title:
+              permalink:
+              category:
+              id:
+          tracking_code:
+            acf: 'sponsored_post_tracking_code'
+          sponsor_logo:
+            acf: 'sponsored_post_sponsor_logo'
+          sponsor_link:
+            acf: 'sponsored_post_sponsor_link'
+  post_listing:
+    variants:
+      custom:
+        template: 'post-listing'
+        fields:
+          main_category:
+          title:
+          title_slug:
+            acf: 'title_slug'
+          highlighted_posts:
+            title:
+            permalink:
+            featured_image:
+              height: 140
+              width: 140
+            category:
+      trending:
+        template: 'trending'
+        fields:
+          title: Trending
+          view_more_url:
+          highlighted_posts:
+            title:
+            permalink:
+            featured_image:
+              height: 140
+              width: 140
+            author:
+      category:
+        fields:
+          title:
+          title_slug:
+            acf: 'title_slug'
+          main_category:
+          posts:
+            count: 6
+            title:
+            permalink:
+            featured_image:
+              height: 140
+              width: 140
+            category:
+            author:
+        template: 'post-listing'
+  secondary_videos:
+    template: 'secondary-videos'
+    fields:
+      title:
+      video_query_args:
+      video_sponsor_data:
+        sponsor_name:
+          acf: 'secondary_videos_sponsor_name'
+        sponsor_logo:
+          acf: 'secondary_videos_sponsor_logo'
+          width: 150
+          retina: false
+        sponsor_link:
+          acf: 'secondary_videos_sponsor_link'
+      custom:
+        post_tag:
+          acf: 'secondary_videos_post_tag'
+        follow_link:
+          acf: 'secondary_videos_follow_link'

@@ -1,0 +1,557 @@
+.email-submit {
+  &-wrap {
+    display: flex;
+    position: relative;
+    height: 50px;
+    border: solid 1px rgba(63, 63, 63, 0.05);
+
+    &:after {
+      content: '';
+      display: inline-block;
+      background: url('/wp-content/themes/grandfather/images/icon-email-grey.svg');
+      background-size: cover;
+      width: 23px;
+      height: 15px;
+      position: absolute;
+      top: 16px;
+      left: 11px;
+    }
+  }
+
+  &-input {
+    @include freight(22px, 30px);
+    width: calc(100% - 100px);
+    padding-left: 42px;
+    letter-spacing: 0.3px;
+    color: $fth-black;
+    box-shadow: inset 0 1px 3px 0 rgba(150, 150, 150, .5);
+
+    &::-webkit-input-placeholder {
+      color: $fth-black;
+    }
+    &:-moz-placeholder {
+      color: $fth-black;
+    }
+    &::-moz-placeholder {
+      color: $fth-black;
+    }
+    &:-ms-input-placeholder {
+      color: $fth-black;
+    }
+
+    &:focus::-webkit-input-placeholder {
+      color: transparent;
+    }
+    &:focus:-moz-placeholder {
+      color: transparent;
+    }
+    &:focus::-moz-placeholder {
+      color: transparent;
+    }
+    &:focus:-ms-input-placeholder {
+      color: transparent;
+    }
+  }
+
+  input[type=submit], button {
+    display: inline-block;
+    background-color: $primary-color;
+    color: $white;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border: none;
+    @include button-hover($primary-color);
+  }
+
+  &-submit {
+    float: left;
+    width: 100px;
+    background-color: $fth_red;
+    @include marr-sans(16px);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 0;
+    height: 100%;
+  }
+
+  &-error {
+    display: none;
+    clear: both;
+    font-size: 14px;
+    font-weight: bold;
+
+    a {
+      border-bottom: 2px solid $fth-red;
+      &:hover {
+        color: $fth-red;
+        border-bottom: 4px solid $fth-red;
+      }
+    }
+  }
+
+  &-success {
+    display: none;
+    color: $primary-color;
+    font-weight: bold;
+  }
+
+  &-form.show {
+
+    &-success {
+      .email-submit {
+        &-input, &-submit, &-wrap {
+          display: none;
+        }
+      }
+
+      ~ .email-submit-success {
+        display: block;
+      }
+    }
+
+    &-error {
+      ~ .email-submit-error {
+        display: block;
+      }
+    }
+  }
+
+  &.hide {
+    display: none;
+  }
+
+  // Styling for specific nl modules
+
+  // Article Footer
+  &-article-footer {
+    margin: 0px 28px 20px;
+    background: #eee;
+    padding: 15px 30px 45px;
+    text-align: left;
+    @media (max-width: 400px) {
+      margin: 0px;
+    }
+    .email-submit {
+      &-title {
+        @include marr-sans(28px, 26px);
+        margin: 0 0 22px 0;
+        text-transform: none;
+        color: $real-black;
+      }
+
+      &-submit {
+        line-height: 50px;
+      }
+
+      &-form.show {
+        &-success {
+          .email-submit-wrap {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  &-form.nav__menu--email-form {
+    .email-submit {
+      &-input {
+        box-shadow: none;
+        @include marr-sans(28px, 26px);
+      }
+    }
+  }
+
+  &-header {
+    .email-submit {
+      &-submit {
+        width: auto;
+      }
+    }
+
+    & .show {
+      height: unset;
+    }
+  }
+
+
+  //Newsletter Signup Page
+  &-landing-form {
+    .email-submit{
+      &-form {
+        display: flex;
+        margin-left: 80px;
+        max-width: 550px;
+
+        @media (max-width: $break-small) {
+          max-width: calc( 100% - 40px);
+          margin: 0 auto;
+        }
+      }
+
+      &-error {
+        margin-left: 80px;
+        @media(max-width: $break-small) {
+          margin-left:20px;
+        }
+      }
+    }
+    h3 {
+      font-weight: bold;
+      margin-top: 20px;
+    }
+
+    input[type=email] {
+      margin: 0;
+      border: 0;
+      color: $white;
+      background: rgba(255, 255, 255, 0.3);
+      @include helvetica(20px);
+      text-align: center;
+
+      @media(max-width: 500px) {
+        width: calc(100% - 90px);
+        font-size: 13px;
+      }
+
+      &::placeholder {
+        color: $white;
+      }
+    }
+
+    input[type=submit] {
+      width: 150px;
+      padding: 15px;
+      @include marr-sans(20px);
+      @media(max-width: 500px) {
+        width: 90px;
+        font-size: 17px;
+      }
+    }
+  }
+
+
+  // Header Nav HP
+  &-form.homepage-header-nav-email-form {
+    .email-submit {
+      &-submit {
+        height: auto;
+      }
+    }
+
+    &.show {
+      &-success {
+        height: 0;
+
+        ~ .email-submit-success {
+          @media (min-width: 750px) {
+            display: block;
+            position: absolute;
+            top: 50px;
+            text-align: center;
+          }
+          @media (min-width: 1000px) {
+            top: 15px;
+            right: 0;
+          }
+        }
+
+        ~ .header-nav-links-bottom {
+          margin-top: 5px;
+        }
+      }
+    }
+
+    display: none;
+    margin-left: 50px;
+    width: 338px;
+    color: $nobel;
+
+    @media (max-width: 1040px) {
+      max-width: 100%;
+      width: 100%;
+      order: 2;
+    }
+    @media (max-width: 750px) {
+      display: flex;
+      margin: 20px 0 0 0;
+      order: 0;
+      max-width: calc(100% - 40px);
+    }
+
+    input[type="email"] {
+      padding: 5px 0 5px 10px;
+      @include freight(17px);
+      line-height: normal;
+      color: $nobel;
+
+      &::placeholder {
+        color: $nobel;
+      }
+      &:-ms-input-placeholder { /* IE */
+        color: $nobel;
+      }
+    }
+
+    input[type="submit"] {
+      padding: 10px 35px;
+    }
+  }
+
+  // Mobile Footer (tap to subscribe)
+  &-mobile-footer {
+    height: auto;
+
+    .email-submit {
+      &-heading {
+        @include marr-sans(26px);
+        text-transform: none;
+        color: $fth-black;
+        margin: 15px 0 22px 0;
+
+        @media (min-width: $break-small) {
+          font-size: 28px;
+        }
+      }
+
+      &-wrap {
+        margin: 0 auto;
+        width: calc(100% - 40px);
+      }
+
+      &-input {
+        width: 100%;
+      }
+
+      &-submit {
+        margin-top: 20px;
+        padding: 15px;
+        width: 100%;
+      }
+    }
+  }
+
+  // HP module
+  &-module {
+    .email-submit {
+      &-submit {
+        height: auto;
+      }
+
+      &-success {
+        margin-left: 0;
+
+        @media (min-width: $break-small) {
+          margin-left: 85px;
+        }
+      }
+    }
+  }
+
+  // Article Header Nav
+  &-form.article-header-nav-email-form {
+    display: flex;
+    align-items: center;
+    width: 100% !important;
+    height: 100%;
+    position: relative;
+    border: 1px solid $white;
+    background: $white;
+    .email-submit-input {
+      width: calc(100% - 100px);
+      margin-left: 0;
+      background-color: transparent;
+      padding: 0 0 0 17px;
+      height: 28px;
+      letter-spacing: 0.25px;
+      font-family: 'FreightTextProBold';
+      font-size: 14px;
+      line-height: 18px;
+
+      @media (min-width: 700px) {
+        width: calc(100% - 174px);
+        height: 42px;
+        font-size: 16px;
+      }
+
+      &::placeholder {
+        color: $silver;
+      }
+    }
+    &.show-success {
+      display: none;
+    }
+
+    input[type=submit].email-submit-submit {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+      font-family: "MarrSansCondensed-Bold-Web";
+      font-weight: bold;
+      font-size: 14px;
+      width: auto;
+      padding: 0 28px;
+      height: 28px;
+      line-height: 17px;
+      letter-spacing: 0.1px;
+      @media (min-width: 700px) {
+        height: 40px;
+        padding: 0 62px;
+        font-size: 16px;
+        line-height: 19px;
+      }
+
+    }
+  }
+  .validation_message {
+    width: calc(100% - 20px);
+    color: $black;
+    font-family: FreightTextProBold;
+    font-size: em(24pt);
+
+    @media screen and (max-width: $break-small) {
+      font-size: em(16pt);
+    }
+
+    &.email-submit-error, &.email-submit-success {
+      width: 100%;
+      padding: 5px 17px;
+      background: $white;
+    }
+
+    &.email-submit-error {
+      margin-right: 0;
+      color: $fth-red;
+      text-align: left;
+
+      font-size: 16px;
+      line-height: 19px;
+      text-align: left;
+
+      @media screen and (max-width: $break-1000) {
+        font-size: em(16pt);
+      }
+      @media screen and (max-width: $break-small) {
+        margin-left: 0px;
+        font-size: em(12pt);
+        text-align: center;
+      }
+    }
+  }
+
+
+  // Flyout Module
+  &.flyout {
+    padding: 10px 0;
+    margin-top: 39px;
+    position: fixed;
+    bottom: -600px;
+    width: 100%;
+    opacity: 0;
+    background-color: $fth-red;
+    background-image: url("../../images/seahore-flyout.png");
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    transition: all .5s ease-in-out;
+
+    &.show {
+      bottom: 0;
+      left: 0;
+      opacity: 1;
+      z-index: 10;
+      height: auto;
+
+      .inline-newsletter.show + & {
+        top: 0;
+        padding-top: 50px;
+        bottom: unset;
+
+        @media (max-width: $break-small ) {
+          top: 40px;
+          padding-top: 0;
+        }
+      }
+
+      .email-submit-close {
+        bottom: 200px;
+      }
+    }
+
+    .subnav-closed & {
+      margin-top: 0;
+    }
+
+    .email-submit {
+      &-title {
+        @include marr-sans(30px, 36px);
+        max-width: 335px;
+        margin: 31px auto 0 auto;
+        color: $white;
+        letter-spacing: .55px;
+      }
+
+      &-close {
+        position: fixed;
+        bottom: -600px;
+        right: 10px;
+        font-size: 60px;
+        color: $white;
+        transition: top .5s linear;
+
+        .subnav-closed .inline-newsletter.show + & {
+          top: 39px;
+        }
+
+        .inline-newsletter.show + & {
+          top: 80px;
+          bottom: unset;
+        }
+
+      }
+
+      &-form {
+        display: flex;
+        flex-direction: column;
+        max-width: 335px;
+        width: 100%;
+        margin: 0 auto;
+        padding-bottom: 20px;
+
+        &-input {
+          margin-top: 29px;
+          padding: 10px 20px;
+          background-color: $white;
+
+          &::placeholder {
+            @include marr-sans(16px);
+            font-size: 16px;
+            letter-spacing: .22px;
+            text-align: center;
+            color: $silver;
+          }
+        }
+
+        &-submit {
+          @include marr-sans(16px);
+          margin-top: 10px;
+          padding: 10px 0;
+          border: 1px solid $white;
+          background-color: $fth-red;
+        }
+
+        &.show-success {
+          display: none;
+
+          ~ .email-submit-success {
+            display: block;
+            padding: 70px 0;
+            font-size: 36px;
+            text-align: center;
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+}

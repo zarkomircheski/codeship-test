@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="18px" viewBox="0 0 22 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.1 (44463) - http://www.bohemiancoding.com/sketch -->
+    <title>rarr</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="square">
+        <g id="rarr" transform="translate(1.000000, 2.000000)" stroke="#DC4028" stroke-width="2">
+            <path d="M19,7 L12,0" id="Line-4"></path>
+            <path d="M18.2842712,14.1421356 L11.2128463,7.07071069" id="Line-4" transform="translate(15.142136, 11.000000) scale(-1, 1) translate(-15.142136, -11.000000) "></path>
+            <path d="M17.5,7 L0.382757231,7" id="Line-6"></path>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,83 @@
+// Mobile First
+$break-hero: 800px;
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  margin: 20px auto 0 auto;
+  max-width: calc(100% - 40px);
+  background-color: $white;
+  border: 1px solid $natural-gray;
+  
+  @media (min-width: $break-hero) {
+    max-width: 100%;
+  }
+
+  // Collection page styling
+  .has-collection & {
+    border: none;
+
+    @media (min-width: $break-hero) {
+      flex-direction: row;
+    }
+  }
+
+  // Article Page styling
+  .single-post & {
+    max-width: 600px;
+    margin-bottom: 20px;
+  }
+
+
+  &-content {
+    margin: auto;
+    max-width: calc(100%  - 60px);
+    text-align: center;
+
+    &-image {
+      width: 100%;
+
+      @media (min-width: $break-hero) {
+        max-width: 600px;
+      }
+    }
+
+    @media (min-width: $break-hero) {
+      max-width: 400px;
+    }
+
+    &-title {
+      @include marr-sans(35px);
+      text-align: center;
+      margin: 30px;
+    }
+
+    &-text {
+      margin: 30px;
+      @include freight(25px);
+    }
+  }
+
+  &-learn-more {
+    margin: 20px auto;
+    padding: 5px;
+    width: calc(100% - 40px);
+    background: $fth-red;
+    @include marr-sans(18px);
+    text-align: center;
+    line-height: 35px;
+    text-transform: uppercase;
+    color: #fff;
+    cursor: pointer;
+    
+    a:hover {
+      .hero & {
+        color: #fff;
+      }
+    }
+
+    @media (min-width: $break-hero) {
+      max-width: 250px;
+    }
+  }
+}

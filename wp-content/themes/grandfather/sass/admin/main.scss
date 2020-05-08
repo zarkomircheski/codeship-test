@@ -1,0 +1,23 @@
+/*
+ * This file is meant to house styles that are applicable to elements in admin interface.
+ */
+
+.acf-field-5a4bf7dfc9eed {
+  .acf-relationship .list {
+    height: auto;
+  }
+}
+
+// Hide CMS Fields
+#pageanalysis, #category-adder, .category-tabs li:last-of-type, #tagsdiv-fields {
+  display: none;
+}
+
+.acf-field-6a4bd32c930bf {
+  display: none;
+}
+
+.acf-field-listicle-item-uuid, .acf-field-listicle-item-product-asin,  .acf-field-listicle-item-product-data{
+  display: none;
+  visibility: hidden;
+}

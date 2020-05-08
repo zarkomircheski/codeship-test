@@ -1,0 +1,54 @@
+body.login {
+  background-color: #fff; 
+  }
+
+#login h1 a {
+  background: url(../images/logo.png) center 0 no-repeat;
+  width: 289px;
+  height: 77px;
+  background-size: 289px 77px; 
+  }
+
+.login p#backtoblog a:link, .login p#backtoblog a:visited {
+  color: #000;
+  text-shadow: none; 
+  }
+
+.login .message {
+  background-color: #152832;
+  color: #fff;
+  border-color: #c93f2d;
+  text-align: center; 
+  }
+
+.login #backtoblog {
+  text-align: center; 
+  }
+  
+.login #backtoblog a {
+   color: #152832; 
+   }
+    
+.login #backtoblog a :hover, .login #backtoblog a :active {
+    color: #152832; 
+    }
+
+#loginform {
+  background: none;
+  border: none;
+  box-shadow: none; 
+  }
+
+.login #nav {
+  display: none; 
+  }
+
+#loginform .button-primary {
+  background-image: none;
+  background-color: #c93f2d;
+  border-color: #c93f2d;
+  background-image: none;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  text-shadow:none; 
+  }

@@ -1,0 +1,13 @@
+.mce-toolbar .mce-btn i.mce-i-end_block {
+  background-color: #dc4028;
+  width: 12px;
+  height: 12px;
+  margin-top: 4px;
+}
+
+
+#wp-content-editor-container .mce-last .mce-btn .mce-i-blockquote,
+#wp-content-editor-container .mce-last .mce-btn .mce-i-backcolor,
+#wp-content-editor-container .mce-last .mce-btn .mce-i-bullist {
+  color: #dc4028;
+}

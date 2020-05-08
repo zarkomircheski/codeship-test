@@ -1,0 +1,147 @@
+.three-items-with-lead {
+  margin-top: 35px;
+
+  &-items {
+    margin-top: 30px;
+  }
+
+  &-item {
+    width: 50%;
+    float: left;
+
+    &:not(.large) {
+      display: flex;
+      padding: 50px 10px 0 15px;
+
+
+      @media (max-width: 600px) {
+        padding-left: 0;
+        margin: 10px auto 0 auto;
+      }
+      @media (max-width: 400px) {
+        flex-direction: column;
+      }
+
+      a {
+        order: 2;
+      }
+    }
+
+    &:nth-of-type(2) {
+      padding-top: 0;
+
+      @media (max-width: 600px) {
+        padding-top: 50px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      width: calc(100% - 40px);
+      float: unset;
+      margin: auto;
+      padding-left: 0;
+    }
+
+    &.more-content {
+      @media (max-width: 850px) {
+        margin: 40px auto 10px auto;
+        padding: 0;
+        justify-content: center;
+        max-width: calc(100% - 40px);
+        width: 100%;
+      }
+    }
+
+
+    &.large {
+      padding-right: 35px;
+
+      @media (max-width: 600px) {
+        padding-right: 0;
+        margin: 0 auto;
+      }
+
+      .three-items-with-lead-item-category {
+        position: absolute;
+        transform-origin: left;
+        transform: rotate(-90deg);
+        bottom: 1%;
+        left: 5px;
+      }
+
+      img:not(.is-franchise) {
+        padding-left: 20px;
+        background-color: #fff;
+      }
+
+      .three-items-with-lead-title {
+        @include marr-sans(27px);
+
+      }
+
+      .three-items-with-lead-summary {
+        @include freight(27px);
+
+      }
+    }
+  }
+
+  &-image {
+    position: relative;
+
+    &:not(.large) {
+      margin-left: 10px;
+      max-width: 180px;
+      order: 2;
+      @media (max-width: 400px) {
+        margin: auto;
+        order: 0;
+      }
+
+      .three-items-with-lead-item-category {
+        width: 100%;
+        text-align: center;
+        
+        @media (max-width: $break-800) {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &-description {
+    line-height: 1.3em;
+    &.large {
+      margin: 20px auto 0 20px;
+      max-width: 450px;
+    }
+
+    &:not(.large) {
+      max-width: 300px;
+
+      @media (max-width: 600px) {
+        margin-left: 20px;
+      }
+      @media (max-width: 400px) {
+        margin: 30px auto 0 auto;
+      }
+    }
+  }
+
+  &-title {
+    @include marr-sans(22px);
+    margin-top: .3em;
+    
+  }
+
+  &-summary {
+    @include freight(22px);
+    margin-top: .3em;
+
+  }
+
+  &-height {
+    display: block;
+    clear: both;
+  }
+}

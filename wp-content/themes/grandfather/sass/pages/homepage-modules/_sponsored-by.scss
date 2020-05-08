@@ -1,0 +1,25 @@
+.sponsored-by {
+
+  &-icon {
+    display: block;
+    text-align: center;
+
+    .sponsored-by-image {
+      img {
+        width: auto;
+        max-height: 60px;
+      }
+    }
+  }
+
+  &-image {
+    max-width: 150px;
+    margin: 0 auto;
+  }
+
+  &-byline {
+    font-family: $secondary-font-family;
+    font-size: 16px;
+    color: $natural-gray;
+  }
+}

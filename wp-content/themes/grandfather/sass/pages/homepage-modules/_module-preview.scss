@@ -1,0 +1,9 @@
+.module-preview {
+  border: 3px dotted $fth-red;
+  &-text {
+    display: block;
+    text-transform: uppercase;
+    text-align: center;
+    @include freight-bold(17px);
+  }
+}

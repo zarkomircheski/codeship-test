@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="24px" viewBox="0 0 30 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.1 (44463) - http://www.bohemiancoding.com/sketch -->
+    <title>Text</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" fill-opacity="0.5">
+        <g id="Share-2" transform="translate(-173.000000, -15.000000)" fill="#1C1E1C">
+            <path d="M188,15 C179.729,15 173,19.71 173,25.5 C173,28.432 174.756,31.228 177.831,33.214 C177.082,36.73 174.41,37.991 174.293,38.045 C174.076,38.145 173.958,38.384 174.015,38.616 C174.068,38.842 174.27,39 174.5,39 C174.507,39 174.514,39 174.521,38.999 C174.754,38.989 180.245,38.729 185.318,35.829 C186.216,35.942 187.118,36 188,36 C196.271,36 203,31.29 203,25.5 C203,19.71 196.271,15 188,15" id="Text"></path>
+        </g>
+    </g>
+</svg>

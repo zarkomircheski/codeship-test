@@ -1,0 +1,19 @@
+{
+    "name": "fatherly/libs",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "William",
+            "email": "william@usterix.com"
+        }
+    ],
+    "require": {
+        "symfony/yaml": "^3.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Fatherly\\": "src/Fatherly"
+        }
+    }
+}

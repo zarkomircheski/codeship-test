@@ -1,0 +1,33 @@
+.preferences-page {
+  height: 627px;
+
+  // Break points used by postup. Do not use these breakpoints anywhere else
+  @media (max-width: 1004px) {
+    height: 483px;
+  }
+  @media (max-width: $break-1000) {
+    height: 451px;
+  }
+  @media (max-width: 604px) {
+    height: 393px;
+  }
+  @media (max-width: 557px) {
+    height: 412px;
+  }
+  @media (max-width: 379px) {
+    height: 408px;
+  }
+
+  iframe {
+    margin-top: 32px;
+    border: 0px;
+
+    @media (max-width: $break-1000) {
+      margin-top: 0;
+    }
+  }
+
+  + .site-footer {
+    margin-top: 0;
+  }
+}

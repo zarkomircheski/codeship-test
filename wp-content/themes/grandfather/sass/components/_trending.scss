@@ -1,0 +1,26 @@
+.trending {
+   max-width: 300px;
+   margin-top: 30px;
+
+   &-title {
+     @include marr-sans(25px);
+     color: $fth-red;
+   }
+
+   &-item {
+     display: flex;
+     margin-top: 20px;
+
+     &-image {
+       max-width: 80px;
+       width: 100%;
+     }
+
+     &-title {
+       @include freight-bold(18px);
+       color: $black;
+       margin-left: 8px;
+
+     }
+   }
+ }

@@ -1,0 +1,69 @@
+{
+  "name": "Fatherly",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.php",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Fatherly-com/fatherly-wp.git"
+  },
+  "author": "Fatherly",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/Fatherly-com/fatherly-wp/issues"
+  },
+  "scripts": {
+    "lint-js": "eslint gulpfile.js wp-content/themes/grandfather/js",
+    "lint-js-format": "eslint gulpfile.js wp-content/themes/grandfather/js --format node_modules/eslint-stats/byError.js"
+  },
+  "browserslist": [
+    "> 1% in my stats",
+    "not ie 11",
+    "Safari 11",
+    "last 1 Edge versions"
+  ],
+  "homepage": "https://bitbucket.org/fatherly/wordpress/src/master/",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "babelify": "^8.0.0",
+    "browser-sync": "^2.24.4",
+    "browserify": "^16.2.0",
+    "browserslist": "^3.2.7",
+    "browserslist-ga": "0.0.10",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-import": "^2.11.0",
+    "eslint-plugin-prettier": "^2.6.0",
+    "eslint-stats": "^1.0.0",
+    "fancy-log": "^1.3.2",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-clean": "^0.4.0",
+    "gulp-clean-css": "^3.4.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-font2css": "^0.1.2",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^4.0.0",
+    "gulp-sourcemaps": "^2.6.0",
+    "gulp-terser": "^1.2.0",
+    "gulp-util": "^3.0.8",
+    "gulp-wp-cache-bust": "^1.0.8",
+    "jquery": "^3.3.1",
+    "node-bourbon": "^4.2.8",
+    "prettier": "^1.12.1",
+    "randomstring": "^1.1.5",
+    "replace": "^1.0.0",
+    "run-sequence": "^2.2.1",
+    "through2": "^2.0.3",
+    "vinyl-buffer": "^1.0.1",
+    "vinyl-source-stream": "^2.0.0"
+  },
+  "dependencies": {
+    "intersection-observer": "^0.4.3",
+    "intersection-observer-polyfill": "^0.1.0",
+    "jquery-touch-events": "^1.0.7",
+    "requirejs": "^2.3.5"
+  }
+}

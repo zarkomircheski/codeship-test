@@ -1,0 +1,61 @@
+.end-square {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background-color: #dc4028;
+  vertical-align: sub;
+}
+
+.pull-quote {
+  position: relative;
+  @include marr-sans(30px, 36px);
+  letter-spacing: normal;
+  color: #dc4028;
+  margin: 40px 0;
+  text-align: center;
+}
+
+.pull-quote:after,
+.pull-quote:before {
+  content: '';
+  position: absolute;
+  height: 4px;
+  width: 13px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  background: #dc4028;
+  top: -15px;
+}
+
+.pull-quote:after {
+  top: auto;
+  bottom: -20px;
+}
+
+.article__tips {
+  padding: 15px;
+  background-color: rgba(0, 0, 0, 0.02);
+  border: solid 1px rgba(63, 63, 63, 0.1);
+}
+
+.article__tips h4 {
+  font-size: 24px;
+  margin: 0 0 20px;
+}
+
+.article__tips li {
+  font-style: italic;
+  list-style: none;
+  padding-left: 5px; 
+  text-indent: -13px;
+  margin-bottom: 15px;
+}
+
+.article__tips li:before{
+  content: "\25A0 ";
+  font-style: normal;
+  display: inline-block;
+  margin-right: 4px;
+  color: #dc4028;
+}

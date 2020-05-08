@@ -1,0 +1,86 @@
+.product-module {
+  width: 100%;
+  margin: 0 0 20px 0;
+  border: 1px solid $silver;
+  background-color: $white;
+
+  &-text {
+    color: $mine-shaft;
+
+    &-title {
+      @include marr-sans(18px);
+    }
+    
+    &-content {
+      @include freight(15px);
+      margin-top: 10px;
+    }
+
+    &-button {
+      @include marr-sans(16px);
+      background-color: $fth-red;
+      padding: 8px;
+      margin-top: 20px;
+      text-align: center;
+      color: $white;
+    }
+
+    &-sponsor {
+      @include freight-italic(12px);
+      text-align: center;
+      margin-top: 10px;
+      color: $mine-shaft;
+
+      span {
+        @include freight-bold(12px);
+      }
+    }
+  }
+
+  &-large {
+    max-width: 600px;
+    margin-left: 28px;
+
+    a {
+      display: flex;
+      flex-direction: row;
+    }
+
+    & .product-module {
+
+      &-content {
+        max-width: 330px;
+        margin: 20px 20px 0 0;
+      }
+
+      &-image img {
+        max-width: 210px;
+        width: unset;
+        margin: 20px;
+      }
+    }
+  }
+
+  &-small {
+    max-width: 300px;
+    padding: 10px;
+    margin:  0 auto 20px auto;
+
+    & .product-module {
+
+      &-text {
+        display: flex;
+
+        &-content {
+          width: 153px;
+        }
+      }
+
+      &-image {
+        width: 117px;
+        margin: 10px 10px 0 0;
+      }
+    }
+  }
+
+}

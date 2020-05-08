@@ -1,0 +1,83 @@
+.more-from {
+  margin: 30px 10px 10px 10px;
+  justify-content: center;
+
+  &-title {
+    @include marr-sans(50px);
+    text-align: center;
+    margin-top: 40px
+  }
+
+  &-items {
+    display: flex;
+    flex-direction: row;
+    flex: 10;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    &-done ~ .more-from-load-more {
+      display: none;
+    }
+  }
+
+  &-item {
+    margin: 40px 10px 20px 10px;
+    display: table-cell;
+    max-width: 230px;
+    position: relative;
+    background-color: #FBFAF8;
+
+    @media (max-width: 499px) {
+      height: auto;
+    }
+
+    // Check if user is on IE10 or IE11
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+      display: block;
+    }
+
+    &-description {
+      margin: 10px 10px 60px 10px;
+      line-height: 1em;
+      @media (max-width: 500px) {
+        margin-bottom: 40px;
+      }
+    }
+
+    &-title {
+      @include marr-sans(18px);
+      margin-top: .3em;
+    }
+
+    &-summary {
+      @include freight(18px);
+      margin-top: .3em;
+    }
+
+    &-category, &-franchise {
+      position: absolute;
+      max-width: calc(100% - 20px);
+      width: 100%;
+      bottom: 0;
+      margin: 0 0 20px 10px;
+      padding-left: 10px;
+
+      @media (max-width: 500px) {
+        position: relative;
+      }
+    }
+
+  }
+
+  &-load-more {
+    width: calc(100% - 20px);
+    margin: 20px auto 0 auto;
+    background: $fth-red;
+    @include marr-sans(18px);
+    color: #fff;
+    text-align: center;
+    line-height: 35px;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+}

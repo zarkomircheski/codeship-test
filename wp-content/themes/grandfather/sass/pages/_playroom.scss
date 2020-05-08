@@ -1,0 +1,372 @@
+.playroom {
+  margin: 0 auto;
+
+  img {
+    max-width: 1000px;
+  }
+
+  .title {
+    @include marr-sans(34px);
+    text-align: center;
+    margin-top: 40px;
+    color: $fth-red;
+  }
+
+  &-image {
+    text-align: center;
+    background-color: $fth-red;
+    img {
+      width: 100%;
+    }
+  }
+
+  &-banner {
+    position: relative;
+    display: flex;
+    background-color: #fdc83d;
+    &-inner {
+      @include freight-bold-italic(20px, 30px);
+      display: flex;
+      margin: 0 auto;
+      padding: 10px 0px;
+      max-width: 1000px;
+      color: $fth-red;
+      text-align: center;
+      @media (max-width: $break-1000) {
+        flex-direction: column;
+      }
+      a {
+        @include freight-bold(20px, 30px);
+        margin-left: 5px;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &-about {
+    &-body {
+      @include freight(18px, 28px);
+      max-width: 650px;
+      width: calc(100% - 60px);
+      color: $dove-gray;
+      margin: 30px auto 0 auto;
+      line-height: 1.5;
+
+      @media (max-width: $break-small) {
+        font-size: 18px;
+      }
+    }
+  }
+
+  &-location {
+    position: relative;
+    display: flex;
+    background-color: $fth-red;
+    color: $white;
+    height: 450px;
+    margin-top: 60px;
+
+    @media (max-width: $break-1000) {
+      height: auto;
+    }
+
+    svg {
+      position: absolute;
+      top: 65px;
+      right: 0;
+
+      @media (max-width: $break-1000) {
+        top: 468px;
+      }
+    }
+
+    &-inner {
+      display: flex;
+      margin: 0 auto;
+      max-width: 1000px;
+
+      @media (max-width: $break-1000) {
+        flex-direction: column;
+      }
+
+      &-map{
+        max-width: 600px;
+        width: 100%;
+      }
+
+      &-info {
+        margin: 80px 40px;
+
+        @media (max-width: $break-1000) {
+          margin-top: 10px;
+        }
+
+        pre {
+          @include marr-sans(18px, 26px);
+          letter-spacing: .24px;
+        }
+
+        &-pipe {
+          width: 83px;
+          height: 1px;
+          background-color: $white;
+          margin-bottom: 30px;
+        }
+
+        &-loc {
+          color: $charlotte;
+        }
+      }
+    }
+  }
+
+  &-events {
+    &-log {
+      margin: 20px 0;
+
+      iframe {
+        width: 100%;
+        height: 2600px;
+
+        @media (max-width: 875px) {
+          height: 2800px;
+        }
+        @media (max-width: 590px) {
+          height: 6090px;
+        }
+      }
+
+    }
+
+    &-body {
+      @include freight(18px, 28px);
+      max-width: 650px;
+      width: calc(100% - 60px);
+      color: $dove-gray;
+      margin: 30px auto 0 auto;
+      line-height: 1.5;
+      text-align: center;
+
+      @media (max-width: $break-small) {
+        font-size: 18px;
+      }
+    }
+  }
+
+  &-cta {
+    position: relative;
+    margin: 40px auto 0 auto;
+    padding-bottom: 20px;
+    background-color: $fth-red;
+    text-align: center;
+
+    @media (max-width: $break-small) {
+      margin-top: 0;
+    }
+
+    .svg-1 {
+      position: absolute;
+      top: -35px;
+      right: 20px;
+
+      @media (max-width: $break-small) {
+        top: -70px;
+        right: -73px;
+      }
+    }
+
+    .svg-2 {
+      position: absolute;
+      top: 38px;
+      left: 210px;
+      width: 64px;
+      height: 64px;
+
+      @media (max-width: $break-1000) {
+        top: 66px;
+        left: 104px;
+      }
+
+      @media (max-width: $break-small) {
+        top: 85px;
+        left: 4px;
+      }
+    }
+
+    &-title {
+      @include marr-sans(40px);
+      padding-top: 50px;
+      color: $white;
+    }
+
+    &-subtitle {
+      @include freight(20px);
+      margin-top: 10px;
+      color: $charlotte;
+    }
+
+    &-social {
+      display: flex;
+      padding: 0;
+      margin: 30px auto 30px auto;
+      width: 200px;
+      color: $white;
+
+      li {
+        display: inline-block;
+        white-space: nowrap;
+        vertical-align: middle;
+        margin: 0 20px 0 auto;
+        margin-top: 16px;
+        width: 81px;
+        height: 29px;
+        text-align: center;
+        line-height: em(24px);
+        border: 1px solid $white;
+
+        a{
+          border: 0;
+          color: $white;
+          @include marr-sans(12.6px);
+        }
+      }
+
+      &-facebook {
+        background-color: $facebook-color-alt;
+
+        .incon-facebook-squared:before {
+          padding-right: 5px;
+        }
+      }
+
+      &-email {
+        background-color: #FFA246;
+
+        .icon-mail {
+          padding-right: 5px;
+        }
+      }
+    }
+  }
+
+  &-sponsors {
+    &-logos {
+      display: flex;
+      margin: 20px auto 0 auto;
+      max-width: 763px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    &-logo {
+      width: auto;
+      margin: 50px;
+
+      &.lego {
+        margin-top: 25px;
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  &.sincerly .playroom, &.backyard .playroom {
+    &-location {
+
+      &-inner-info {
+        @include marr-sans(18px, 26px);
+
+        &-time {
+          list-style-type: none;
+        }
+      }
+    }
+
+  &-thanks {
+    &-title {
+      font-size: 30px;
+    }
+
+    &-logo {
+      margin: 20px auto;
+    }
+  }
+
+}
+
+  &.sincerly .playroom {
+    .title {
+      color: $thunder;
+    }
+
+    &-image {
+      background-color: $thunder;
+    }
+
+    &-location {
+      background-color: $thunder;
+
+      &-inner-info {
+        &-loc {
+          color: $fth-red;
+        }
+      }
+    }
+
+    &-cta {
+      background-color: $thunder;
+    }
+  }
+
+  &.backyard .playroom {
+
+    .title {
+      color: $punch;
+    }
+
+    &-image {
+      background-color: $punch;
+    }
+
+    &-location {
+      background-color: $punch;
+
+      &-inner-info {
+
+        &-pipe {
+          margin-top: 30px;
+        }
+
+        &-loc {
+          max-width: 120px;
+          color: $white;
+          text-decoration: underline;
+        }
+      }
+    }
+
+    &-cta {
+      background-color: $punch;
+    }
+
+    &-sponsors {
+      &-title {
+        color: $punch;
+        font-size: 34px;
+      }
+
+      &-logos{
+        max-width: 620px;
+      }
+    }
+
+    &-thanks {
+      margin: 40px auto;
+      &-title {
+        font-size: 30px;
+      }
+    }
+  }
+}

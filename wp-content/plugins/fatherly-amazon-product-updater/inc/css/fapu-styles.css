@@ -1,0 +1,51 @@
+.add-new-product-form {
+    margin: 20px;
+}
+
+
+#add_form_spinner {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+}
+
+#add_form_spinner .spinner {
+    display: block;
+    visibility: visible;
+}
+
+#add_form_spinner.hidden {
+    display: none;
+}
+
+.row-processing {
+    opacity: .5;
+}
+
+.fatherly-admin-button a, .fatherly-error-button a {
+    color: white;
+    text-decoration: none;
+}
+
+.wp-core-ui .fatherly-error-button, .wp-core-ui .fatherly-error-button:hover, .fatherly-error-button, .fatherly-error-button:hover {
+    background-color: #C33C54;
+    border-color: #C33C54;
+    box-shadow: 0 1px 0 #C33C54;
+    text-shadow: 0 -1px 1px #C33C54, 1px 0 1px #C33C54, 0 1px 1px #C33C54, -1px 0 1px #C33C54;
+}
+
+.product-num {
+    float: right;
+    position: relative;
+    top: -15px;
+    font-weight: bold;
+}
+
+.fatherly-spinner {
+    visibility: visible;
+    float: left;
+}
+
+.articles-with-product ul {
+    margin: 0px;
+}

@@ -1,0 +1,66 @@
+.sponsored-content {
+  margin: 50px 0 20px 0;
+  background: #fff;
+
+  &-disclaimer {
+    @include freight(10px);
+    line-height: 20px;
+    color: $natural-gray;
+    text-transform: uppercase;
+    text-align: center;
+    position: relative;
+    top: -20px;
+  }
+
+  &-icon {
+    margin: 10px auto 30px auto;
+    display: block;
+    width: 110px;
+  }
+  &-icon-small {
+    margin: 5px auto 15px auto;
+    display: block;
+    width: 55px;
+  }
+
+  &-items {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 40px;
+    @media (max-width: 600px) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &-title {
+    margin-top: 10px;
+  }
+
+  &-item {
+    max-width: 240px;
+    text-align: center;
+    padding: 0 5px;
+    margin: 0 10px;
+    @media (max-width: $break-800) {
+      margin: 0 auto;
+    }
+
+    &-category {
+      margin: 10px;
+      color: $natural-gray;
+    }
+
+    &-title {
+      @include freight(22px, 1em);
+    }
+
+    &.large {
+      max-width: 400px;
+
+      @media (max-width: 600px) {
+        max-width: 240px;
+      }
+    }
+  }
+}

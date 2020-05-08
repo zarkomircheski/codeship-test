@@ -1,0 +1,63 @@
+.product-shortcode {
+  margin: 20px auto;
+  background-color: $gallery;
+
+  @media only screen and (max-width: $break-small) {
+    width: calc(100% - 40px);
+  }
+  .product {
+
+    &-image {
+      margin: 0 auto;
+      padding-top: 15px;
+      max-width: calc(100% - 30px);
+
+      img {
+        display: flex;
+        margin: 0 auto;
+      }
+    }
+
+    &-title {
+      padding: 15px 0px;
+      margin: 0 auto;
+      max-width: calc(100% - 20px);
+
+      h3 {
+        @include marr-sans(30px, 30px);
+        margin: 0;
+        text-align: center;
+        text-transform: none;
+      }
+    }
+    &-description {
+      p {
+        margin: 0 auto;
+        max-width: calc(100% - 40px);
+        @include freight(18px, 24px);
+        text-align: left;
+      }
+    }
+    &-buy__btn {
+      display: flex;
+      justify-content: center;
+      padding: 15px 0px;
+      a {
+        display: inline-block;
+        @include marr-sans(16px, 36px);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        text-align: center;
+        background-color: $fth-red;
+        color: $white;
+        padding: 3px 30px;
+        border: solid 2px $fth-red;
+        &:hover {
+          color: $fth-red;
+          background-color: $white;
+          border: solid 2px $fth-red;
+        }
+      }
+    }
+  }
+}

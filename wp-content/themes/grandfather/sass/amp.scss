@@ -1,0 +1,442 @@
+@font-face {
+  font-family: 'FreightTextProBook';
+  src: url('/wp-content/themes/grandfather/fonts/FreightTextProBook.eot');
+  src: url('/wp-content/themes/grandfather/fonts/FreightTextProBook.eot?#iefix')
+  format('embedded-opentype'),
+  url('/wp-content/themes/grandfather/fonts/FreightTextProBook.woff2') format('woff2'),
+  url('/wp-content/themes/grandfather/fonts/FreightTextProBook.woff') format('woff'),
+  url('/wp-content/themes/grandfather/fonts/FreightTextProBook.ttf') format('truetype');
+}
+
+// Colors
+$white: #fff;
+$black: #000;
+$mine-shaft: #3f3f3f;
+$natural-gray: #868584;
+$punch: #dc4028;
+$gallery: #ededed;
+$heavy-metal: #1C1E1C;
+$nobel: #B8B7B7;
+
+// Breakpoints 
+$mobile: 600px;
+$mobile-small: 420px;
+
+// Fonts
+$bodyContent: 'FreightTextProBook', 'serif', 'Times New Roman', Times, serif;
+$defaultFonts: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen-Sans", "Ubuntu", "Cantarell", "Helvetica Neue", sans-serif;
+$newTimes: 'Times New Roman', sans-serif;
+
+
+
+html {
+  background-color: $white;
+}
+
+body {
+  font-family: $defaultFonts
+}
+
+.amp-wp {
+  &-header {
+    padding: 12px 0;
+    background: $white;
+
+    div {
+      padding: 0;
+    }
+
+    a {
+      background-repeat: no-repeat;
+      background-size: contain;
+      display: block;
+      width: 200px;
+      height: 40px;
+      margin: 0 auto;
+      text-indent: -9999px;
+      background-position: center center;
+    }
+  }
+
+  &-meta {
+    font-family: $defaultFonts
+  }
+
+  &-article {
+    margin: 0.5em auto 1.5em;
+
+    &-featured-image {
+      margin: 0 auto;
+      max-width: 750px;
+    }
+
+    &-header {
+      margin: 0 auto;
+      max-width: 400px;
+      text-align: center;
+
+      @media only screen and (max-width: $mobile-small) {
+        max-width: calc(100% - 40px);
+      }
+
+      div, .amp-wp-title, .wp-caption-text, .amp-wp-tax-category, .amp-wp-tax-tag, .amp-wp-comments-link, .amp-wp-footer p, .back-to-top {
+        font-family: $bodyContent;
+      }
+
+      &-category {
+        margin: 0 auto;
+        text-transform: uppercase;
+        font-size: 15px;
+        font-weight: bold;
+
+        a {
+          text-align: center;
+          text-decoration: none;
+          color: $mine-shaft;
+        }
+      }
+
+      &-title {
+        margin: 0 auto 15px auto;
+        font-family: sans-serif;
+        font-size: 32px;
+        text-align: center;
+        line-height: 35px;
+        font-weight: 800;
+      }
+
+      &-subheading {
+        margin: 0 auto 10px;
+        width: 100%;
+        color: $mine-shaft;
+        font-family: serif;
+        font-style: italic;
+        font-size: 25px;
+        letter-spacing: -.025em;
+        font-weight: 100;
+      }
+
+      &-author {
+        margin: 0 auto;
+        width: 100%;
+        line-height: 0.5;
+
+        amp-img {
+          display: none;
+        }
+
+        .amp-wp-byline {
+          margin-bottom: 0;
+          color: $mine-shaft;
+          font-size: 17px;
+        }
+
+        .amp-wp-posted-on {
+          display: none;
+        }
+      }
+
+      &-date {
+        margin: 0 auto;
+        width: 100%;
+        line-height: 0.5;
+      }
+    }
+
+    .advertisement-text {
+      font-size: 12px;
+      color: $natural-gray;
+      text-align: center;
+      margin: 10px 0 5px;
+    }
+
+    .wp-caption-text {
+      border-bottom: none;
+      padding: 0;
+      font-size: 11px;
+    }
+
+    .buy-button {
+      padding: 12px 15px;
+      background: $natural-gray;
+      color: $mine-shaft;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: .8em;
+    }
+
+    blockquote {
+      background: transparent;
+      border-left: 5px solid $punch;
+    }
+
+    &-content {
+      max-width: calc(100% - 40px);
+      margin: 30px 20px 0 20px;
+
+      > p {
+        font-family: $bodyContent;
+        font-size: 22px;
+        line-height: 30px;
+        letter-spacing: 0.3px;
+        color: $mine-shaft;
+        margin: 20px 0 0 0;
+
+        &:first-of-type {
+          &:first-letter {
+            font-family: sans-serif;
+            color: $punch;
+            font-weight: bold;
+            font-size: 90px;
+            line-height: 40px;
+            float: left;
+            padding-right: 11px;
+            margin-left: -4px;
+          }
+        }
+
+        a {
+          color: $heavy-metal;
+          border-bottom: 2px solid $punch;
+          text-decoration: none;
+        }
+      }
+
+      &-video {
+        margin-bottom: 20px;
+      }
+
+
+      .product {
+        margin: 0 auto;
+        text-align: center;
+
+        &-shortcode {
+          margin: 10px 0;
+          padding: 15px 0;
+          background-color: $gallery;
+
+          amp-img {
+            display: flex;
+            max-width: calc(100% - 30px);
+          }
+        }
+
+        &-title {
+          margin: 0 auto;
+          max-width: calc(100% - 20px);
+          text-align: center;
+
+           a {
+             color: $black;
+             font-size: 24px;
+             text-decoration: none;
+           }
+        }
+
+        &-description {
+          p {
+            margin: 0 auto;
+            max-width: calc(100% - 40px);
+            font-family: $bodyContent;
+            font-size: 18px;
+            line-height: 30px;
+            letter-spacing: 0.3px;
+            color: $mine-shaft;
+          }
+        }
+
+        &-buy__btn {
+          display: flex;
+          justify-content: center;
+          margin: 15px 0;
+          font-size: 15px;
+
+          a {
+            padding: 10px 25px;
+            color: $white;
+            font-weight: 700;
+            text-transform: uppercase;
+            text-decoration: none;
+            background-color: $punch;
+          }
+        }
+      }
+    }
+
+    .in-article-ad {
+      margin: 10px;
+      text-align: center;
+    }
+
+    .list {
+
+      &-item-content {
+        width: calc(100% - 40px);
+        margin: 0 auto;
+      }
+
+      &-load-more {
+        margin: 20px auto 0 auto;
+        padding: 8px;
+        max-width: 250px;
+        background: $punch;
+        text-align: center;
+        font-weight: bold;
+        
+        a {
+          text-decoration: none;
+          color: $white;
+        }
+      }
+    }
+
+    &-outbrain {
+      max-width: 500px;
+      margin: 20px auto 0 auto;
+    }
+
+    // In Body Recirculation
+    .recirculation {
+      margin: 20px auto 0 auto;
+      max-width: 500px;
+
+      @media (max-width: $mobile) {
+        max-width: calc(100% - 30px);
+      }
+
+      &-title {
+        font-family: sans-serif;
+        font-size: 22px;
+        font-weight: bold;
+        color: $punch;
+      }
+
+      &-content {
+        margin: 0 auto;
+
+        &-item {
+          display: flex;
+          margin-top: 15px;
+
+          &-title {
+            font-family: $newTimes;
+            font-size: 18px;
+            margin-left: 10px;
+            max-width: calc(100% - 70px);
+
+            a {
+              color: black;
+              text-decoration: none;
+            }
+          }
+        }
+      }
+    }
+
+    // Recirculation Module
+    .related-articles {
+      max-width: calc(100% - 40px);
+      margin: 20px auto;
+      font-family: $newTimes;
+
+      &__header {
+        margin: 0 auto;
+        max-width: 500px;
+        font-size: 20px;
+        line-height: 34px;
+        font-weight: bold ;
+        color: $punch;
+      }
+
+      .related-article {
+        margin: 20px auto 0 auto;
+        max-width: 500px;
+        font-family: $newTimes;
+
+        &__details {
+          display: flex;
+          flex-direction: column;
+          margin-top: 10px;
+          line-height: 1.25;
+          font-weight: 600;
+        }
+
+        &__subcategory {
+          opacity: .5;
+          text-transform: uppercase;
+          font-weight: bold;
+          color: $mine-shaft;
+          text-decoration: none;
+        }
+
+        &__title {
+          color: $black;
+          text-decoration: none;
+        }
+
+        &__ad {
+          margin: 20px auto 0 auto;
+          max-width: 300px;
+        }
+      }
+    }
+  }
+
+  &-newsletter {
+    margin: 0 16px;
+    font-size: 15px;
+    text-align: center;
+
+    .email-submit{
+      width: 100%;
+
+      h3 {
+        display: block;
+      }
+
+      &-wrap{
+        display: flex;
+        justify-content: center;
+      }
+
+      &-input {
+        padding: 10px;
+        width: 100%;
+        margin: 0;
+        border: 1px solid $nobel;
+        font-size: 15px;
+        font-weight: bold;
+
+        &::placeholder {
+          color: $nobel;
+        }
+        &:focus {
+          outline: none;
+        }
+      }
+      &-submit {
+        max-width: 250px;
+        padding: 10px 25px;
+        border: none;
+        margin: 0;
+        background: $punch;
+        color: $white;
+        font-weight: bold;
+        font-size: 15px;
+        line-height: 15px;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        -webkit-appearance: button;
+      }
+    }
+
+    .amp-form-submit-success {
+      input {
+        display: none;
+      }
+    }
+  }
+}
+

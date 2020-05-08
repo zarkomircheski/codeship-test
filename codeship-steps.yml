@@ -1,0 +1,6 @@
+- name: test-phpcs
+  service: codeship-example-php
+  command: php ./vendor/bin/phpcs --standard=phpcs.xml
+- name: test-lint-js
+  service: codeship-example-php
+  command: npm run lint-js -- --quiet

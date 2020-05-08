@@ -1,0 +1,75 @@
+.calls-to-action__ages-stages {
+  position: relative;
+  border-bottom: 2px dashed $fth-red;
+
+  &__inner {
+    margin: 0 20px 40px;
+    max-width: 600px;
+
+    @media (min-width: $break-small) {
+      margin: 0 auto 40px;
+    }
+  }
+
+  &__header {
+    @include marr-sans(20px, 34px);
+    text-transform: none;
+    color: $fth-red;
+    border: none;
+    margin-left: 20px;
+    padding: 0 0 5px;
+    margin: 30px 0 10px;
+    text-align: left;
+
+    &:before, &:after {
+      display: none;
+    }
+  }
+
+  &-list {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: calc(50% - 10px);
+    @media (min-width: $break-small) {
+      width: calc(50% - 20px);
+    }
+  }
+
+  &-item {
+    margin-bottom: 20px;
+    background: $fth-btn-blue;
+    text-align: center;
+    a {
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      padding: 10px;
+    }
+  }
+
+  &__logo {
+    background: #fff;
+    height: 60px;
+    width: 60px;
+    position: absolute;
+    bottom: -33px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      background: url(/wp-content/themes/grandfather/images/fatherly-icon.svg);
+      background-size: cover;
+      width: 29px;
+      height: 60px;
+    }
+  }
+}

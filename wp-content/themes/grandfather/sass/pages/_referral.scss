@@ -1,0 +1,65 @@
+.referral {
+  max-width: 640px;
+  margin: 0 auto;
+  text-align: center;
+  @include freight(25px);
+
+  &-dek {
+    margin: 0 auto;
+    max-width: calc(100% - 40px);
+
+    &-title {
+      @include marr-sans(50px);
+      margin: 40px auto 0 auto;
+    }
+
+    &-cta {
+      margin: 20px auto 0 auto;
+    }
+  }
+
+  &-image {
+    margin: 0 auto;
+    max-width: 600px;
+  }
+
+  &-copy {
+    position: relative;
+
+    &-button {
+      max-width: 560px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: $alto;
+
+      @media (max-width: $break-small) {
+        max-width: calc(100% - 40px);
+      }
+
+      &-text {
+        @include marr-sans(25px);
+      }
+    }
+
+    &-success {
+      @include marr-sans(25px);
+      opacity: 0;
+      z-index: -1;
+      position: absolute;
+      top: 18px;
+      left: calc(50% - 119px);
+      padding: 24px 80px;
+      background-color: white;
+
+      &.show {
+        animation: fadeInOut 2s linear forwards;
+        z-index: 1;
+      }
+    }
+  }
+}
+
+@keyframes fadeInOut {
+  50% { opacity:1; }
+  100% { opacity:0; }
+}

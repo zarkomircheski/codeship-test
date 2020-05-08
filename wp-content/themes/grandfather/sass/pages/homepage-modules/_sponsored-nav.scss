@@ -1,0 +1,75 @@
+//Mobile First
+.sponsored-nav {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+
+  &-left {
+    position: absolute;
+    top: 0;
+    left: 10px;
+    height: 40px;
+    // add half the value of the padding added in &-sponsor
+    transform: translateY(50%);
+
+    @media (min-width: 800px) {
+      left: 30px;
+    }
+  }
+
+  &-button {
+    margin: 10px 0;
+
+    .menu-button__icon-bar {
+      background: #fff;
+
+      .black & {
+        background: #000;
+      }
+    }
+  }
+
+  &-sponsor {
+    margin: 0 10px 0 auto;
+    padding: 20px 0;
+    max-width: 160px;
+    text-align: center;
+
+    @media (min-width: 800px) {
+      margin: auto;
+      max-width: 200px;
+    }
+  }
+
+  &-partner {
+    margin-bottom: 5px;
+    @include freight(10px);
+    text-transform: uppercase;
+    color: $nobel;
+  }
+
+
+  &-logo {
+    svg {
+      margin-left: 10px;
+      max-height: 40px;
+      max-width: em(65pt);
+
+      @media (min-width: 600px) {
+        max-width: em(85pt);
+      }
+      @media (min-width: 800px) {
+        margin-left: 30px;
+        max-width: em(103pt);
+      }
+
+      path {
+        fill: #fff !important;
+
+        .black & {
+          fill: #000 !important;
+        }
+      }
+    }
+  }
+}

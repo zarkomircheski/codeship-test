@@ -1,0 +1,1 @@
+docker-compose --env-file ../docker/.env -f ../docker/docker-compose.yml exec php-fpm vendor/bin/phpcs --standard=phpcs.xml

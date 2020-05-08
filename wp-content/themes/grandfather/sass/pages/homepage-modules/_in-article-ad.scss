@@ -1,0 +1,19 @@
+.in-article-ad {
+  min-height: 293px;
+  margin: 0 28px 20px;
+  @media (max-width: 400px) {
+    margin: 0px;
+  }
+  
+  &-text {
+    width: 100%;
+    @include freight(12px);
+    color: $natural-gray;
+    text-align: center;
+    margin: 10px 0 5px;
+  }
+  .fth-ad {
+    padding-bottom: 5px;
+    text-align: center;
+  }
+}

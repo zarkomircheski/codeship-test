@@ -1,0 +1,65 @@
+.interscroller {
+  position: relative;
+  cursor: pointer;
+  z-index: 5;
+  max-width: 600px;
+  margin-bottom: 40px;
+  background-color: #f5f2f2;
+
+  .in-article-ad-text {
+    padding: 10px 0;
+    margin-bottom: 0;
+    background-color: silver;
+    color: $black;
+  }
+
+  &-container {
+    position: absolute;
+    width: 100%;
+    left: 0;
+
+    &-stick , img {
+      top: 8%;
+      backface-visibility: hidden;
+      border: 0;
+      position: fixed;
+      z-index: 4;
+      width: 100%;
+      height: auto;
+
+
+      .jw-state-complete video {
+         z-index: -1;
+
+      }
+    }
+
+    img {
+      max-width: 600px;
+      width: 100%;
+
+    }
+
+    &-speaker {
+      position: absolute;
+      display: block;
+      z-index: 5;
+      max-width: 40px;
+      width: 100%;
+      top: 50px;
+      right: 25px;
+      font-size: 36px;
+      background-color: rgba(255, 255, 255, 0.5);
+
+      .fa:before {
+        margin: 6px;
+        color: $thunder;
+      }
+
+
+      &.hide {
+        display: none;
+      }
+    }
+  }
+}

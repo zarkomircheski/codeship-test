@@ -1,0 +1,749 @@
+/*************************************************************
+[TABLE OF CONTENTS]
+
+- MENU BUTTON
+- SEARCH
+- LOGO
+- HEADER BACKGROUND
+- HEADING + SUBHEADING
+- IMAGE
+- MENU
+- SUB-MENU
+- MENU ICONS
+- MENU ITEM DESCRIPTION
+- MAIN WRAPPER
+- MENU BACKGROUND COLOR
+- MENU BACKGROUND IMAGE
+- WIDGETS
+- MISC
+- WORDPRESS TOOLBAR
+*************************************************************/
+
+
+/* MENU BUTTON
+**************************************************/
+/* wrapper */
+.taptap-menu-button-wrapper {
+	position:fixed;
+	z-index:999999999;
+	top:7px;
+	left:11px;
+	width:54px;
+	height:54px;
+	cursor:pointer;
+	
+	-webkit-transition:all .5s ease;
+	-moz-transition:all .5s ease;
+	transition:all .5s ease;
+}
+/* if right positioning active */
+.taptap-right {
+	left:auto;
+	right:11px;
+}
+/* button */
+.taptap-menu-button,
+.taptap-menu-button-alt,
+.taptap-menu-button-three {
+	padding:12px 11px 10px 11px;
+	
+	-webkit-transition:all .3s ease;
+	-moz-transition:all .3s ease;
+	transition:all .3s ease;
+}
+/* button (alternate 3 lines) */
+.taptap-menu-button-three-alt {
+	padding:16px 11px 16px 16px;
+	
+	-webkit-transition:all .3s ease;
+	-moz-transition:all .3s ease;
+	transition:all .3s ease;
+}
+/* menu bars (4 lines) */
+.taptap-menu-button:after,
+.taptap-menu-button:before,
+.taptap-menu-button div.taptap-menu-button-middle:before,
+.taptap-menu-button div.taptap-menu-button-middle:after {
+	content:'';
+	display:block;
+	height:1px;
+	margin:5px 0;
+	background-color:#747A7D;
+
+	-webkit-transition:all .25s ease;
+	-moz-transition:all .25s ease;
+	transition:all .25s ease;
+	
+	/* lessen animation 'pop' in Firefox */
+	outline:1px solid transparent;
+}
+/* 1st+3rd menu bar widths (4 lines) */
+.taptap-menu-button:before,
+.taptap-menu-button div.taptap-menu-button-middle:after {
+	width:28px;
+}
+/* 2nd+4th menu bar widths (4 lines) */
+.taptap-menu-button:after,
+.taptap-menu-button div.taptap-menu-button-middle:before {
+	width:19px;
+}
+/* menu bars (alternate 4 lines) */
+.taptap-menu-button-alt:after,
+.taptap-menu-button-alt:before,
+.taptap-menu-button-alt div.taptap-menu-button-alt-middle:before,
+.taptap-menu-button-alt div.taptap-menu-button-alt-middle:after {
+	content:'';
+	display:block;
+	width:22px;
+	height:2px;
+	margin:4px 0;
+	background-color:#747A7D;
+
+	-webkit-transition:all .25s ease;
+	-moz-transition:all .25s ease;
+	transition:all .25s ease;
+	
+	/* lessen animation 'pop' in Firefox */
+	outline:1px solid transparent;
+}
+/* menu bars (3 lines) */
+.taptap-menu-button-three:after,
+.taptap-menu-button-three:before,
+.taptap-menu-button-three div.taptap-menu-button-three-middle:before {
+	content:'';
+	display:block;
+	width:32px;
+	height:2px;
+	margin:6px 0;
+	background-color:#747A7D;
+
+	-webkit-transition:all .25s ease;
+	-moz-transition:all .25s ease;
+	transition:all .25s ease;
+	
+	/* lessen animation 'pop' in Firefox */
+	outline:1px solid transparent;
+}
+/* menu bars (alternate 3 lines) */
+.taptap-menu-button-three-alt:after,
+.taptap-menu-button-three-alt:before,
+.taptap-menu-button-three-alt div.taptap-menu-button-three-alt-middle:before {
+	content:'';
+	display:block;
+	height:2px;
+	margin:4px 0;
+	background-color:#747A7D;
+
+	-webkit-transition:all .25s ease;
+	-moz-transition:all .25s ease;
+	transition:all .25s ease;
+	
+	/* lessen animation 'pop' in Firefox */
+	outline:1px solid transparent;
+}
+.taptap-menu-button-three-alt:after,
+.taptap-menu-button-three-alt:before {
+	width:13px;
+}
+.taptap-menu-button-three-alt:before {
+	margin-left:auto;
+	margin-right:4px;
+}
+.taptap-menu-button-three-alt div.taptap-menu-button-three-alt-middle:before {
+	width:23px;
+}
+/* menu button (static) */
+.taptap-menu-button-static {
+	width:29px;
+	height:29px;
+	fill:#747A7D;
+	margin:12px 0 0 12px;
+	
+	-webkit-transition:all .25s ease;
+	-moz-transition:all .25s ease;
+	transition:all .25s ease;
+}
+.taptap-menu-button-wrapper:hover .taptap-menu-button-static {
+	fill:#A3A6A9;
+}
+
+
+/* SEARCH
+**************************************************/
+/* search button */
+.taptap-search-button,
+.taptap-search-button-right { z-index:999; }
+.taptap-search-button {
+	border-left:1px solid #454D52;
+	width:50px;
+	height:40px;
+	position:fixed;
+	top:13px;
+	left:76px;
+	cursor:pointer;
+}
+.taptap-search-button-right {
+	border-right:1px solid #454D52;
+	width:50px;
+	height:40px;
+	position:fixed;
+	top:13px;
+	right:76px;
+	cursor:pointer;
+}
+.taptap-search-button-right-two {
+	right:6px !important;
+}
+.taptap-search-button-left {
+	left:6px !important;
+}
+.taptap-search-button svg,
+.taptap-search-button-right svg {
+	width:18px;
+	height:18px;
+	margin:12px 0 0 16px;
+	fill:#74797D;
+	
+	-webkit-transition:all .25s ease;
+	-moz-transition:all .25s ease;
+	transition:all .25s ease;
+}
+.taptap-search-button:hover svg,
+.taptap-search-button-right:hover svg {
+	fill:#949698;
+}
+/* search form */
+.taptap-search-wrapper {
+	position:fixed;
+	z-index:999999999;
+	top:-1000px;
+	left:0;
+	right:0;
+	width:100%;
+	height:67px;
+	margin:0;
+	padding:0;
+	overflow:hidden;
+	background-color:#212121;
+	
+	-webkit-transform:translateY(-67px);
+	-moz-transform:translateY(-67px);
+	transform:translateY(-67px);
+	
+	-webkit-transition:-webkit-transform .3s ease 0s, top 0s ease .3s;
+	-moz-transition:-moz-transform .3s ease 0s, top 0s ease .3s;
+	transition:transform .3s ease 0s, top 0s ease .3s;
+}
+.taptap-search-wrapper-active {
+	top:0 !important;
+	
+	-webkit-transform:translateY(0) !important;
+	-moz-transform:translateY(0) !important;
+	transform:translateY(0) !important;
+	
+	-webkit-transition:-webkit-transform .3s ease 0s, top 0s ease 0s !important;
+	-moz-transition:-moz-transform .3s ease 0s, top 0s ease 0s !important;
+	transition:transform .3s ease 0s, top 0s ease 0s !important;
+}
+/* searchform input */
+.taptap-search-wrapper #searchform input {
+	width:100%;
+	height:100%;
+	font-size:20px;
+	font-family:'Roboto';
+	font-weight:300;
+	color:rgba(255,255,255,0.5);
+	padding:19px 0 22px 16px;
+	margin:0;
+	border:0;
+	background:none;
+	
+	-webkit-border-radius:0;
+	-moz-border-radius:0;
+	border-radius:0;
+	
+	-webkit-transition:all .15s ease;
+	-moz-transition:all .15s ease;
+	transition:all .15s ease;
+}
+/* searchform placeholder */
+#searchform input::-webkit-input-placeholder { color:#7F848A !important; }
+#searchform input:-moz-placeholder { color:#7F848A !important; }
+#searchform input::-moz-placeholder { color:#7F848A !important; }
+#searchform input:-ms-input-placeholder { color:#7F848A !important; }
+/* search form close wrapper */
+.taptap-search-close-icon {
+	position:absolute;
+	top:15px;
+	right:16px;
+	cursor:pointer;
+}
+/* search form close icon */
+.taptap-search-close-icon svg {
+	width:35px;
+	height:35px;
+	fill:#6B6F74;
+	
+	-webkit-transition:all .25s ease;
+	-moz-transition:all .25s ease;
+	transition:all .25s ease;
+}
+.taptap-search-close-icon:hover svg {
+	fill:#BBBFC4;
+}
+
+
+/* LOGO
+**************************************************/
+/* wrapper */
+.taptap-logo-wrapper {
+	position:fixed;
+	z-index:99;
+	top:0;
+	right:17px;
+	height:67px;
+	display:table;
+    
+    width:100%;
+    text-align:right;
+}
+/* if left positioning active */
+.taptap-left {
+    right:auto;
+    left:17px;
+	text-align:left;
+}
+/* if logo center positioning active */
+.taptap-center {
+    right:0;
+    left:0;
+	text-align:center;
+}
+/* if logo is an image */
+.taptap-logo-image {
+	display:table-cell;
+	vertical-align:middle;
+}
+.taptap-logo-image img {
+	width:auto;
+	max-height:35px;
+}
+/* if logo is text */
+.taptap-logo {
+	display:table-cell;
+	vertical-align:middle;
+}
+.taptap-logo a {
+	font-family:'Montserrat';
+	font-size:15px;
+	text-decoration:none;
+	color:#BABDBF;
+	margin:0;
+	padding:5px;
+	
+	-webkit-transition:all .25s ease;
+	-moz-transition:all .25s ease;
+	transition:all .25s ease;
+}
+.taptap-logo a:hover {
+	color:#DDDEDF;
+	text-decoration:none;
+}
+
+
+/* HEADER BACKGROUND
+**************************************************/
+.tap-tap-header {
+	position:fixed;
+	z-index:98;
+	top:0;
+	left:0;
+	width:100%;
+	height:67px;
+	background-color:#172026;
+}
+
+
+/* HEADING + SUBHEADING
+**************************************************/
+/* heading + subheading joint styles */
+.taptap-heading,
+.taptap-subheading,
+.taptap-heading a,
+.taptap-subheading a {
+	font-family:arial,tahoma,verdana,sans-serif;
+	text-align:center;
+	letter-spacing:0;
+	text-decoration:none;
+}
+/* heading */
+.taptap-heading,
+.taptap-heading a {
+	font-size:14px;
+	color:#D1CA66;
+}
+/* subheading */
+.taptap-subheading,
+.taptap-subheading a {
+	font-size:10px;
+	color:#727B81;
+}
+.taptap-heading a:hover {
+	color:#D1CA66;
+	text-decoration:underline;
+}
+.taptap-subheading a:hover {
+	color:#727B81;
+	text-decoration:underline;
+}
+
+
+/* IMAGE
+**************************************************/
+.taptap-image {
+	text-align:center;
+	margin:23px 0;
+}
+.taptap-image img {
+	max-width:280px;
+	height:auto;
+}
+
+
+/* MENU
+**************************************************/
+/* main menu */
+.taptap-by-bonfire ul {
+	width:100%;
+	list-style-type:none;
+	margin:0;
+	padding:0;
+	margin:30px 0 0 0;
+}
+/* individual main menu items */
+.taptap-by-bonfire ul li {
+	width:100%;
+	min-height:30px;
+	list-style-type:none;
+	margin:0;
+	padding:1px;
+	text-align:center;
+}
+.taptap-by-bonfire ul li a {
+	font-family:arial,tahoma,verdana,sans-serif;
+	font-size:11px;
+	color:#8C9093;
+	margin:0;
+	padding:6px 5px;
+	display:inline-block;
+	text-decoration:none;
+	
+	-webkit-transition:all .2s ease;
+	-moz-transition:all .2s ease;
+	transition:all .2s ease;
+}
+.taptap-by-bonfire ul li.current-menu-item a {
+	color:#8C9093;
+}
+.taptap-by-bonfire ul li.full-item-svg-hover > a,
+.taptap-by-bonfire ul li a:hover,
+.taptap-by-bonfire ul li.current-menu-item a:hover {
+	color:#E2E3E4;
+}
+
+
+/* SUB-MENU
+**************************************************/
+.taptap-by-bonfire .menu {
+	list-style:none;
+	margin:0;
+	padding:0;
+}
+.taptap-by-bonfire .menu li {
+	position:relative;
+	margin:0;
+	padding:0;
+	border:none;
+	z-index:auto;
+}
+/* the arrow button */
+.taptap-by-bonfire .menu li span {
+	display:inline-block;
+	width:34px;
+	height:25px;
+	position:absolute;
+	top:0;
+	margin:0 7px 0 7px;
+	padding:0;
+	cursor:pointer;
+	text-align:center;
+	border-left:1px solid #464D52;
+	line-height:22px;
+}
+.taptap-by-bonfire .menu li span svg {
+	width:10px;
+	height:auto;
+
+	padding:0;
+	margin:0 0 0 0;
+	fill:#8C9093;
+	vertical-align:middle;
+	
+	-webkit-transform:rotate(90deg);
+	-moz-transform:rotate(90deg);
+	transform:rotate(90deg);
+	
+	-webkit-transition:all .3s ease;
+	-moz-transition:all .3s ease;
+	transition:all .3s ease;
+}
+.full-item-svg-hover > span svg,
+.taptap-by-bonfire .menu li span:hover svg {
+	fill:#fff !important;
+}
+/* the arrow button (active state) */
+.taptap-by-bonfire .menu li span.taptap-submenu-active svg {	
+	-webkit-transform:rotate(270deg);
+	-moz-transform:rotate(270deg);
+	transform:rotate(270deg);
+}
+.taptap-by-bonfire .menu ul {
+	list-style:none;
+	margin:0;
+	padding:0;
+	display:none;
+}
+/* sub-menu items */
+.taptap-by-bonfire .sub-menu a {
+	color:#686C6F;
+	font-size:11px;
+	margin:0;
+	padding:6px 5px;
+}
+
+
+/* MENU ICONS
+**************************************************/
+.taptap-by-bonfire ul li a i,
+.taptap-by-bonfire .sub-menu a i {
+	float:left;
+	margin:0 8px;
+	
+	-webkit-transition:all .2s ease;
+	-moz-transition:all .2s ease;
+	transition:all .2s ease;
+}
+.taptap-by-bonfire ul li a i {
+	color:#8C9093;
+}
+.taptap-by-bonfire .sub-menu a i {
+	color:#686C6F;
+}
+
+
+/* MENU ITEM DESCRIPTION
+**************************************************/
+.taptap-menu-item-description {
+	font-family:'Droid Serif';
+	font-size:11px;
+	line-height:11px;
+	color:#8D97A4;
+}
+/* hide menu descriptions for drop-down items */
+li.menu-item-has-children > a .taptap-menu-item-description { display:none; }
+
+
+/* MAIN WRAPPER
+**************************************************/
+.taptap-main-wrapper {
+	position:fixed;
+	z-index:99999;
+	top:-1000%;
+	left:0;
+	width:100%;
+	/* 101% because of the 1px line on iOS when Safari toolbar gets hidden on scroll */
+	height:101%;
+	opacity:0;
+	
+	/* prevent iOS scroll flicker */
+	-webkit-transform:translate3d(0,0,0);
+	/* smooth scroll on touch devices */
+	-webkit-overflow-scrolling:touch;
+	
+	-webkit-transform:translateY(-100%);
+	-moz-transform:translateY(-100%);
+	transform:translateY(-100%);
+	
+	-webkit-transition:-webkit-transform .5s ease, top 0s ease .5s, opacity .25s ease 0s;
+	-moz-transition:-moz-transform .5s ease, top 0s ease .5s, opacity .25s ease 0s;
+	transition:transform .5s ease, top 0s ease .5s, opacity .25s ease 0s;
+}
+.taptap-main-wrapper-active {
+	top:0;
+	opacity:1;
+
+	-webkit-transform:translateY(0);
+	-moz-transform:translateY(0);
+	transform:translateY(0);
+	
+	-webkit-transition:-webkit-transform .65s ease, top 0s ease 0s, opacity .6s ease 0s;
+	-moz-transition:-moz-transform .65s ease, top 0s ease 0s, opacity .6s ease 0s;
+	transition:transform .65s ease, top 0s ease 0s, opacity .6s ease 0s;
+}
+.taptap-main-inner {
+	width:100%;
+	height:101%;
+	overflow-y:auto;
+}
+.taptap-main {
+	padding:0;
+	margin:0;
+	display:table;
+	width:100%;
+	height:100%;
+	
+	/* prevent flicker when menu arrow is being animated */
+	-webkit-transform:translate3d(0,0,0);
+}
+.taptap-main-inner-inner {
+	display:table-cell;
+	vertical-align:top;
+	margin:0;
+	padding:90px 20px 60px 20px;
+}
+/* if toolbar is showing */
+.taptap-main-inner-inner-toolbar {
+	padding-top:157px;
+}
+
+
+/* MENU BACKGROUND COLOR
+**************************************************/
+.taptap-background-color {
+	position:fixed;
+	z-index:999;
+	top:-1000%;
+	left:0;
+	width:100%;
+	/* 110% because of the 1px line on iOS when Safari toolbar gets hidden on scroll */
+	height:110%;
+	background-color:#182127;
+	
+	/* prevent iOS scroll flicker */
+	-webkit-transform:translate3d(0,0,0);
+	
+	/* smooth scroll on touch devices */
+	-webkit-overflow-scrolling:touch;
+	
+	-webkit-transform:translateY(-100%);
+	-moz-transform:translateY(-100%);
+	transform:translateY(-100%);
+	
+	-webkit-transition:-webkit-transform .5s ease, top 0s ease .5s;
+	-moz-transition:-moz-transform .5s ease, top 0s ease .5s;
+	transition:transform .5s ease, top 0s ease .5s;
+}
+.taptap-background-color-active {
+	top:0;
+
+	-webkit-transform:translateY(0);
+	-moz-transform:translateY(0);
+	transform:translateY(0);
+	
+	-webkit-transition:-webkit-transform .5s ease, top 0s ease 0s;
+	-moz-transition:-moz-transform .5s ease, top 0s ease 0s;
+	transition:transform .5s ease, top 0s ease 0s;
+}
+
+
+/* MENU BACKGROUND IMAGE
+**************************************************/
+.taptap-background-image {
+	position:fixed;
+	z-index:9999;
+	top:-1000%;
+	left:0;
+	width:100%;
+	/* 110% because of the 1px line on iOS when Safari toolbar gets hidden on scroll */
+	height:110%;
+	opacity:0;
+	
+	/* prevent iOS scroll flicker */
+	-webkit-transform:translate3d(0,0,0);
+	
+	/* smooth scroll on touch devices */
+	-webkit-overflow-scrolling:touch;
+	
+	-webkit-transform:translateY(-100%);
+	-moz-transform:translateY(-100%);
+	transform:translateY(-100%);
+	
+	background-size:cover;
+	background-repeat:no-repeat;
+	/* background-position set in taptap.php */
+	
+	-webkit-transition:opacity .5s ease 0s, -webkit-transform .5s ease, top 0s ease .5s;
+	-moz-transition:opacity .5s ease 0s, -moz-transform .5s ease, top 0s ease .5s;
+	transition:opacity .5s ease 0s, transform .5s ease, top 0s ease .5s;
+}
+.taptap-background-image-active {
+	top:0;
+	opacity:.1;
+	
+	-webkit-transform:translateY(0);
+	-moz-transform:translateY(0);
+	transform:translateY(0);
+	
+	-webkit-transition:opacity .5s ease 0s, -webkit-transform .5s ease, top 0s ease 0s;
+	-moz-transition:opacity .5s ease 0s, -moz-transform .5s ease, top 0s ease 0s;
+	transition:opacity .5s ease 0s, transform .5s ease, top 0s ease 0s;
+}
+
+
+/* WIDGETS
+**************************************************/
+.taptap-widgets-wrapper { margin-top:30px; }
+.taptap-widgets-wrapper .widget {
+	text-align:center;
+	width:100%;
+	margin:10px 0 0 0;
+	padding:0;
+	font-size:14px;
+	color:#8C9093;
+	letter-spacing:0;
+}
+.taptap-widgets-wrapper .widget a {
+	color:#8C9093;
+	text-decoration:underline;
+	border:none;
+}
+.taptap-widgets-wrapper .widget a:hover {
+	text-decoration:none;
+	border:none;
+}
+.taptap-widgets-wrapper .widget div,
+.taptap-widgets-wrapper .widget span,
+.taptap-widgets-wrapper .widget iframe,
+.taptap-widgets-wrapper .widget object,
+.taptap-widgets-wrapper .widget embed {
+	margin-left:auto;
+	margin-right:auto;
+}
+
+
+/* MISC
+**************************************************/
+/* if absolute positioning active */
+.taptap-absolute { position:absolute; }
+
+
+/* WORDPRESS TOOLBAR (IF WORDPRESS TOOLBAR ACTIVE, PUSH HEADER ELEMENTS DOWN A BIT)
+**************************************************/
+.wp-toolbar-active { margin-top:32px; }
+/* for the thicker, mobile admin bar */
+@media screen and (max-width: 782px) {
+	.wp-toolbar-active { margin-top:46px; }
+	#wpadminbar { position: fixed !important; }
+}
+/* if WordPress amin bar active, keep it above everything else */
+#wpadminbar { z-index:9999999999999999999999999999; }

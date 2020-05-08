@@ -1,0 +1,76 @@
+.glossary {
+  max-width: 800px;
+  margin: 50px auto 0 auto;
+
+  &-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 15px;
+
+    &-item {
+
+      &-title {
+        @include freight-bold(20px);
+        margin: 10px;
+        padding: 10px 15px;
+        border: solid 1px $fth-red;
+        color: $fth-red;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+
+      &-definition {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        font-size: 24px;
+        background-color: rgba(0,0,0,0.4);
+
+        &-text {
+          @include freight-bold(24px);
+          position: fixed;
+          max-width: 760px;
+          width: 100%;
+          top: calc(50% - 200px);
+          left: calc(50% - 380px);
+          padding: 80px;
+          background-color: white;
+          letter-spacing: .35px;
+
+          &:before {
+            content: '\00d7';
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 40px;
+            color: $fth-red;
+          }
+
+          @media (max-width: $break-1000) {
+            max-width: calc(100% - 40px);
+            left: 20px;
+          }
+
+          &-title {
+            font-weight: 600;
+            letter-spacing: .35px;
+          }
+        }
+      }
+
+      &.show {
+        .glossary-content-item-definition {
+          display: block;
+        }
+      }
+    }
+  }
+}

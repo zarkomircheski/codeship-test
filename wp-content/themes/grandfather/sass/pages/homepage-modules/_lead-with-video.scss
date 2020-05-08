@@ -1,0 +1,22 @@
+.lead-with-video {
+
+  &-items {
+    display: flex;
+    text-align: center;
+    @media (max-width: $break-800) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+
+  &-video {
+    margin-top: 30px;
+    padding-left: 5px;
+    max-width: 34%;
+    width: 100%;
+
+    @media (max-width: $break-800) {
+      max-width: calc(100% - 40px);
+    }
+  }
+}

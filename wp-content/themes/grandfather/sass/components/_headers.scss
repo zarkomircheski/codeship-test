@@ -1,0 +1,31 @@
+h1 {
+  font: 30px / 38px $secondary-font-family;
+  font-weight: 400;
+  @media screen and (max-width: $break-tablet) {
+	  font-size: 20px;
+	  line-height: 28px;
+ 	}
+}
+
+h3 {
+  font: 18px / 24px $tertiary-font-family;
+  font-weight: 400;
+  margin-bottom: 20px;
+  position: relative;
+  text-transform: uppercase;
+  color: #999;
+}
+
+h4 {
+	font: 20px / 22px $secondary-font-family;
+	font-weight: 400;
+}
+
+h6 {
+	font-size: 13px;
+	font-weight: 500;
+	display: block;
+	margin-bottom: 12px;
+	text-transform: uppercase;
+	letter-spacing: .22em;
+}

@@ -1,0 +1,283 @@
+.newsletter-signup {
+  margin-top: 50px;
+  display: flex;
+  @media (max-width: $break-800) {
+    flex-direction: column;
+  }
+  @media (max-width: 600px) {
+    width: calc(100% - 40px);
+    margin: 50px auto 0 auto;
+  }
+  &-input {
+    max-width: 660px;
+    width: 100%;
+    background-color: #fff;
+    @media (max-width: $break-800) {
+      order: 2;
+      margin: 0 auto;
+    }
+  }
+
+  &-image {
+    display: block;
+    margin: 0 30px;
+    width: 30px;
+
+    @media (max-width: 600px) {
+      margin: 0 10px 0 0;
+    }
+  }
+
+  &-content {
+    margin: 20px auto;
+    display: flex;
+    padding: 10px 10px 10px 0;
+    @media (max-width: 600px) {
+      width: calc(100% - 40px);
+      margin: 0 auto;
+      font-size: 20px;
+    }
+
+    &-text {
+      max-width: 480px;
+    }
+
+    p {
+      margin: 0;
+    }
+    @include freight(25px);
+
+    a {
+      color: $fth-red;
+    }
+
+  }
+
+  &-info {
+    margin: 20px 0 10px 0;
+    @include freight-bold(18px);
+  }
+
+  &-form {
+    display: flex;
+    max-width: 425px;
+    @media (max-width: 600px) {
+      font-size: 16px;
+    }
+  }
+
+  &-textbox {
+    max-width: 385px;
+    width: 100%;
+    padding: 8px;
+    color: $nobel;
+    border: 1px solid $nobel;
+    @media (max-width: 600px) {
+      width: calc(100% - 40px);
+    }
+
+    &::placeholder { /* Chrome/Opera/Safari */
+      color: $nobel;
+    }
+
+  }
+
+  &-top-image {
+    margin: 0 auto;
+    max-width: 380px;
+    width: 100%;
+
+    @media (max-width: $break-800) {
+      display: none;
+    }
+    @media (max-width: 600px) {
+      display: block;
+    }
+  }
+
+  &-confirmation {
+    margin: 20px;
+    text-align: center;
+  }
+
+  &-ad {
+    padding: 8px 20px 20px 20px;
+    min-width: 340px;
+    background-color: #EDECE8;
+    @media (max-width: $break-800) {
+      margin: 20px auto;
+      order: 2;
+      padding: 8px 0 0 0;
+      text-align: center;
+    }
+  }
+}
+
+input.newsletter-signup-button {
+  padding-top: 15px;
+  padding-bottom: 12px;
+}
+
+.variant_1 {
+
+  .newsletter-signup {
+
+    &-info {
+      @media (max-width: 600px) {
+        margin-left: -40px;
+      }
+    }
+
+    &-textbox {
+      @media (max-width: 400px) {
+        width: 64%;
+      }
+    }
+
+    &-form {
+      @media (max-width: 600px) {
+        margin-left: -40px;
+      }
+    }
+  }
+}
+
+.variant_2 {
+  @media (max-width: 380px) {
+    width: 100%;
+  }
+
+  .newsletter-signup {
+
+    &-content {
+      flex-direction: column;
+      @include freight(20px);
+
+      &-text {
+        margin: 30px 0 0 30px;
+        @media (max-width: 600px) {
+          margin: 30px auto 120px auto;
+        }
+      }
+    }
+    &-info {
+      margin-top: 0;
+    }
+
+    &-input {
+      background-repeat: no-repeat;
+      background-position: right bottom;
+      @media (max-width: 380px) {
+        width: calc(100% - 40px);
+      }
+    }
+
+    &-form {
+      max-width: 310px;
+    }
+  }
+}
+
+// Article Version
+article {
+  .variant_1.newsletter-signup {
+    background-color: $gallery;
+
+    @media (max-width: $break-small) {
+      width: 100%;
+    }
+
+    .newsletter-signup {
+
+      &-image {
+        display: none;
+
+        @media (max-width: $break-800) {
+          display: block;
+        }
+
+        @media (max-width: $break-small) {
+          display: none;
+        }
+
+      }
+
+      &-content {
+        @media (max-width: $break-small) {
+          margin-top: 10px;
+        }
+      }
+
+      &-input {
+        margin: 0 20px 0 30px;
+        background-color: transparent;
+
+        @media (max-width: $break-small) {
+          margin: auto;
+          max-width: calc(100% - 40px);
+        }
+
+        .email-submit {
+          &-input {
+            font-size: 20px;
+            line-height: 25px;
+          }
+
+          &-form.show-success {
+            & ~ .email-submit-success {
+              margin: 10px 0;
+              text-align: center;
+            }
+
+            .newsletter-signup-content {
+              margin-bottom: 0;
+            }
+          }
+        }
+      }
+
+      &-info {
+        font-size: 16px;
+        line-height: 16px;
+
+        @media (max-width: $break-small) {
+          margin-left: 0;
+        }
+      }
+
+      &-form {
+        size: 14px;
+
+        @media (max-width: $break-small) {
+          margin-left: 0;
+        }
+      }
+
+      &-content {
+        @media (max-width: $break-small) {
+          padding-right: 0;
+          width: fit-content;
+        }
+      }
+
+      &-top-image {
+        margin: auto 30px auto auto;
+        max-width: 250px;
+
+        @media (max-width: $break-small) {
+          margin: 20px auto 0 auto;
+          padding: 0 10px;
+          max-width: 100%;
+          width: auto;
+        }
+      }
+
+      &-title {
+        p {
+          font-size: 16px;
+          line-height: 20px;
+        }
+      }
+    }
+  }
+}

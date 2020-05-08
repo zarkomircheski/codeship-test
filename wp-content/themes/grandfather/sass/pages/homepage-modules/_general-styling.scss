@@ -1,0 +1,117 @@
+.home {
+  @media (max-width: 1040px) {
+    margin: 0 20px;
+  }
+  @media (max-width: 600px) {
+    margin: 0;
+  }
+}
+
+.has-collection {
+
+  &-push-down {
+    margin-top: 100px;
+  }
+
+  .home-page-module {
+    margin: 0 auto;
+
+    &:not(.module__navigation--sponsored_nav) {
+      max-width: 1000px;
+    }
+
+    &:not(.module__free_form) img:not(.seahorse-logo) {
+      max-width: 100%;
+      width: 100%;
+      height: auto;
+      min-height: 1px;
+    }
+
+    & .arrow {
+      content: ' ';
+      display: inline-block;
+      margin-top: 1.05em;
+      margin-left: -0.6em;
+      width: .5em;
+      height: .5em;
+      border-top: 0.1em solid $fth-red;
+      border-right: 0.1em solid $fth-red;
+      -moz-transform: rotate(45deg);
+      -webkit-transform: rotate(45deg);
+      transform: rotate(45deg);
+      margin-right: 10px;
+    }
+
+    .category {
+      display: inline-table;
+      @include freight-bold(14px);
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    .title {
+      @include marr-sans(50px);
+      text-align: center;
+    }
+
+    .sub-title {
+      @include marr-sans(28px);
+      font-weight: 600;
+      text-align: center;
+    }
+
+    .sub {
+      margin-top: .3em;
+      font-family: $secondary-font-family;
+      color: $natural-gray;
+      text-align: center;
+      letter-spacing: -0.07em;
+      line-height: normal;
+    }
+
+    .author {
+      margin-top: 7px;
+      @include freight(16px);
+      line-height: 20px;
+
+      span {
+        @include freight-bold(16px);
+      }
+    }
+
+    a:hover {
+      color: $fth-red;
+    }
+
+    input[type=submit] {
+      @include marr-sans(18px);
+      padding-left: 18px;
+      padding-right: 18px;
+    }
+  }
+
+  &.page-template-homepagev2, &.category {
+    background-color: $homepage-background;
+
+    #content {
+      padding-top: 0;
+    }
+  }
+
+  .site-footer {
+    margin-top: 20px;
+  }
+}
+
+.tracker {
+  width: 1px;
+  height: 1px;
+}
+
+
+.advertisement-text {
+  width: 100%;
+  @include freight(12px);
+  color: $natural-gray;
+  text-align: center;
+}

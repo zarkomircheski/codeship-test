@@ -1,0 +1,105 @@
+# This is a sample build configuration for JavaScript.
+# Check our guides at https://confluence.atlassian.com/x/14UWN for more examples.
+# Only use spaces to indent your .yml configuration.
+# -----
+# You can specify a custom docker image from Docker Hub as your build environment.
+pipelines:
+  default:
+  - step:
+      name: Run ESLint
+      image: node:8
+      caches:
+        - node
+      script:
+        - npm install
+        - npm run lint-js -- --quiet
+  - step:
+      name: Run PHP Code Sniffer
+      image: php:7.0
+      script:
+        - apt-get update && apt-get install -y unzip libxml2-dev git
+        - docker-php-ext-install simplexml
+        - curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+        - composer install --no-interaction
+        - vendor/bin/phpcs --standard=phpcs.xml
+  branches:
+    staging:
+      - step:
+          name: Run PHP Code Sniffer
+          image: php:7.0
+          script:
+            - apt-get update && apt-get install -y unzip libxml2-dev git
+            - docker-php-ext-install simplexml
+            - curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+            - composer install --no-interaction
+            - vendor/bin/phpcs --standard=phpcs.xml
+      - step:
+          name: gulp and deploy
+          image: node:8
+          caches:
+            - node
+          deployment: test
+          script:
+            - npm install
+            - npm run lint-js -- --quiet
+            - npx gulp prod
+            - rm $BITBUCKET_CLONE_DIR/gulpfile.js  $BITBUCKET_CLONE_DIR/.nvmrc $BITBUCKET_CLONE_DIR/package-lock.json $BITBUCKET_CLONE_DIR/package.json $BITBUCKET_CLONE_DIR/docker-compose.sample.yml $BITBUCKET_CLONE_DIR/plugins.zip $BITBUCKET_CLONE_DIR/README.md $BITBUCKET_CLONE_DIR/.babelrc $BITBUCKET_CLONE_DIR/.eslintignore $BITBUCKET_CLONE_DIR/.eslintrc.json $BITBUCKET_CLONE_DIR/browserslist-stats.json $BITBUCKET_CLONE_DIR/appspec.yml $BITBUCKET_CLONE_DIR/bitbucket-pipelines.yml $BITBUCKET_CLONE_DIR/codedeploy_deploy.py $BITBUCKET_CLONE_DIR/composer.json $BITBUCKET_CLONE_DIR/phpcs.xml
+            - rm -rf $BITBUCKET_CLONE_DIR/node_modules
+            - rm -rf $BITBUCKET_CLONE_DIR/scripts
+            - apt-get update # required to install zip
+            - apt-get install -y zip # required for packaging up the application
+            - zip -r ./artifact.zip * # package up the application for deployment
+            - ls -l
+            - pipe: atlassian/scp-deploy:0.3.1
+              variables:
+                USER: 'fatherly'
+                SERVER: 'stagbastion.fatherly.com'
+                REMOTE_PATH: '/var/www/tmp'
+                LOCAL_PATH: './artifact.zip'
+                SSH_KEY: '$STAG_SSH_KEY' # Optional.
+                # EXTRA_ARGS: '<string>' # Optional.
+                DEBUG: 'true'
+            - (umask 077 ; echo $STAG_SSH_KEY | base64 --decode > ~/.ssh/id_rsa)
+            - ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no fatherly@stagbastion.fatherly.com "sudo sh /var/www/tmp/deploy.sh"
+          artifacts: 
+            - artifact.zip 
+    master:
+      - step:
+          name: Run PHP Code Sniffer
+          image: php:7.0
+          script:
+            - apt-get update && apt-get install -y unzip libxml2-dev git
+            - docker-php-ext-install simplexml
+            - curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+            - composer install --no-interaction
+            - vendor/bin/phpcs --standard=phpcs.xml
+      - step:
+          name: gulp and deploy
+          image: node:8
+          caches:
+            - node
+          deployment: test
+          script:
+            - npm install
+            - npm run lint-js -- --quiet
+            - npx gulp prod
+            - rm $BITBUCKET_CLONE_DIR/gulpfile.js  $BITBUCKET_CLONE_DIR/.nvmrc $BITBUCKET_CLONE_DIR/package-lock.json $BITBUCKET_CLONE_DIR/package.json $BITBUCKET_CLONE_DIR/docker-compose.sample.yml $BITBUCKET_CLONE_DIR/plugins.zip $BITBUCKET_CLONE_DIR/README.md $BITBUCKET_CLONE_DIR/.babelrc $BITBUCKET_CLONE_DIR/.eslintignore $BITBUCKET_CLONE_DIR/.eslintrc.json $BITBUCKET_CLONE_DIR/browserslist-stats.json $BITBUCKET_CLONE_DIR/appspec.yml $BITBUCKET_CLONE_DIR/bitbucket-pipelines.yml $BITBUCKET_CLONE_DIR/codedeploy_deploy.py $BITBUCKET_CLONE_DIR/composer.json $BITBUCKET_CLONE_DIR/phpcs.xml
+            - rm -rf $BITBUCKET_CLONE_DIR/node_modules
+            - rm -rf $BITBUCKET_CLONE_DIR/scripts
+            - apt-get update # required to install zip
+            - apt-get install -y zip # required for packaging up the application
+            - zip -r ./artifact.zip * # package up the application for deployment
+            - ls -l
+            - pipe: atlassian/scp-deploy:0.3.1
+              variables:
+                USER: 'fatherly'
+                SERVER: 'prodbastion.fatherly.com'
+                REMOTE_PATH: '/var/www/tmp'
+                LOCAL_PATH: './artifact.zip'
+                SSH_KEY: '$PROD_SSH_KEY' # Optional.
+                # EXTRA_ARGS: '<string>' # Optional.
+                DEBUG: 'true'
+            - (umask 077 ; echo $PROD_SSH_KEY | base64 --decode > ~/.ssh/id_rsa)
+            - ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no fatherly@prodbastion.fatherly.com "sudo sh /var/www/tmp/deploy.sh"
+          artifacts: 
+            - artifact.zip 

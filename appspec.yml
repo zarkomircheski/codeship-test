@@ -1,0 +1,15 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /tmp/www/wordpress/fatherly/
+permissions:
+  - object: /tmp/www/wordpress/fatherly
+    pattern: "**"
+    owner: apache
+    group: apache
+hooks:
+    BeforeInstall:
+        - location: scripts/beforeInstall.bash
+    AfterInstall:
+        - location: scripts/afterInstall.bash

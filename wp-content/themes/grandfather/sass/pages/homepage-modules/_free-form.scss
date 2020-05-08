@@ -1,0 +1,116 @@
+.free-form {
+  max-width: 800px;
+  width: 100%;
+  margin: 50px auto 0 auto;
+
+  @media (max-width: $break-800) {
+    max-width: calc(100% - 40px);
+  }
+
+  &-content {
+    @include freight(24px, 28px);
+
+    h2 {
+      @include marr-sans(28px);
+      width: 100%;
+      font-weight: 600;
+    }
+
+    p {
+      color: $real-black;
+      margin: 20px 0 0 0;
+      letter-spacing: .35px;
+
+      a {
+        border-bottom: 2px solid $fth-red;
+      }
+    }
+
+    // List styling
+    ul {
+      color: $dark-gray;
+
+      li {
+        margin-top: 26px;
+        list-style: none;
+        font-size: 24px;
+
+        &:before {
+          content: "\2588";
+          vertical-align: top;
+          padding-right: 10px;
+          color: $fth-red;
+          font-size: 10px;
+          font-weight: 800;
+          display: inline-block;
+        }
+      }
+    }
+
+    // Product Module styling
+    &.column {
+      display: flex;
+      flex-wrap: wrap;
+
+      .product-shortcode {
+        max-width: 350px;
+        width: 100%;
+
+        img {
+          width: 100%;
+        }
+
+        .product {
+          &-title a {
+            color: $black;
+          }
+          &-description {
+            margin: 0 auto;
+            max-width: calc(100% - 20px);
+          }
+        }
+      }
+    }
+
+
+    // Quote Styling
+    blockquote {
+      position: relative;
+
+      p {
+        @include freight(25px);
+        padding-bottom: 25px;
+        color: $natural-gray;
+        font-weight: 200;
+        letter-spacing: .25px;
+        text-align: center;
+
+        &:first-of-type {
+          @include marr-sans-italic(37px);
+          margin: 0 auto;
+          padding: 25px 0 0 0;
+          max-width: 700px;
+          text-align: center;
+          color: $footer-blue;
+        }
+      }
+
+      &:after, &:before {
+        content:'';
+        left: calc(50% - 25px);
+        width: 60px;
+        height: 4px;
+        background: $fth-red;
+        position:absolute;
+      }
+
+      &:after {
+        bottom: 0px;
+      }
+
+      &:before {
+        top: 0px;
+      }
+    }
+  }
+}

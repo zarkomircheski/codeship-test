@@ -1,0 +1,46 @@
+.franchise-module {
+  background: #1E1E1E;
+
+  .large-content {
+    &-image {
+      margin-left: 0;
+      order: 2;
+      @media (max-width: $break-800) {
+        order: 1;
+        width: auto;
+        margin: auto;
+      }
+      @media (max-width: 640px) {
+        width: calc(100% - 20px);
+      }
+    }
+
+    &-description {
+      color: #fff;
+      @media (max-width: $break-800) {
+        order: 2;
+      }
+    }
+
+    &-padding {
+      background-color: #fff;
+      width: 20px;
+    }
+
+    &-arrow {
+      color: $fth-red;
+    }
+
+    &-category {
+      left: -103%;
+      @media (max-width: $break-800) {
+        left: -15px;
+      }
+
+      // Check if user is on IE10 or IE11
+      @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+        color: #fff;
+      }
+    }
+  }
+}

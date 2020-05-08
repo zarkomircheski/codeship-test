@@ -1,0 +1,761 @@
+body.login, body.register, body.lostpassword, body.resetpass, body.page-template-sweepstakes, body.page-template-custom-login, body.page-template-expecting-login,  body.page-template-custom-skillshare-login, body.page-template-custom-cricket-login{
+	input[type=text], input[type=password] {
+		font-size: 14px;
+		padding: 16px;
+		box-shadow: none;
+		border: 1px solid #DDD;
+		border-radius: 0;
+		-webkit-transition: -webkit-transition, all 0.3s ease-out;
+		-moz-transition: transition, all 0.3s ease-out;
+		-o-transition: transition, all 0.3s ease-out;
+		transition: transition, all 0.3s ease-out;
+		-webkit-appearance: none;
+		&:hover {
+			border-color: $primary-color;
+		}
+		&:focus {
+			border-color: $primary-color;
+		}
+		@media screen and (max-width: $break-tablet) {
+			padding: 16px;
+			margin: 10px 0;
+		}
+	}
+	input[type=submit] {
+		font-size: 14px;
+		font-weight: bold;
+		letter-spacing: 2px;
+		padding: 12px 15px;
+		border-radius: 0;
+		@media screen and (max-width: $break-tablet) {
+			padding: 18px 0;
+		}
+	}
+	label {
+		font-size: 14px;
+		line-height: 18px;
+		font-weight: bold;
+	}
+	.login-page{
+		&__description {
+			text-align: center;
+			font-family: $primary-font-family;
+			margin: 0 0 15px;
+		}
+		&__success-msg {
+			font-size: 18px;
+			color: #FFF;
+			text-align: center;
+			font-weight: bold;
+			margin: 0 0 5px;
+			display: none;
+		}
+	}
+	.page-content {
+		padding: 0 0 40px;
+	}
+	.page-template__title {
+		display: block;
+		width: 320px;
+		margin: 0 auto 20px;
+		text-align: center;
+	}
+	.tml {
+		margin: 0 auto;
+		h3 {
+			font-size: 16px;
+			color: #999;
+			text-align: center;
+			font-family: $primary-font-family;
+			position: relative;
+			margin: 0 0 5px;
+			&:before {
+				content: "";
+				width: 40%;
+				height: 1px;
+				background: #DDD;
+				position: absolute;
+				top: 12px;
+				display: block;
+				right: 0;
+			}
+			&:after {
+				content: "";
+				width: 40%;
+				height: 1px;
+				background: #DDD;
+				position: absolute;
+				top: 12px;
+				display: block;
+				left: 0;
+			}
+		}
+	}
+	.tml-user-login-wrap {
+		margin: 0;
+	}
+	.tml-user-email-wrap {
+		margin: 0 0 10px;
+	}
+	.newsociallogins {
+		margin: 0 0 15px;
+		a {
+			opacity: 1;
+			display: block;
+			background: $facebook-color;
+			-webkit-transition: background-color 0.3s ease-out;
+			-moz-transition: background-color 0.3s ease-out;
+			-o-transition: background-color 0.3s ease-out;
+			transition: background-color 0.3s ease-out;
+			&:hover {
+				background-color: rgba($facebook-color, .9);
+			}
+		}
+		br {
+			display: none;
+		}
+	}
+	.fb-login-btn {
+		display: block;
+		padding: 10px 0;
+		background: $facebook-color;
+		text-align: center;
+		a {
+			position: relative;
+			text-shadow: none;
+			font-size: 18px;
+			line-height: 32px;
+			letter-spacing: 2px;
+			margin-left: 30px;
+			color: #FFF;
+			opacity: 1;
+			display: block;
+		}
+		span {
+			position: relative;
+			text-shadow: none;
+			font-size: 14px;
+			font-weight: bold;
+			line-height: 32px;
+			letter-spacing: 2px;
+			margin-left: 30px;
+			color: #FFF;
+			opacity: 1;
+			display: block;
+		}
+		.fa {
+			font-size: 18px;
+			text-shadow: none;
+			position: relative;
+			line-height: 24px;
+			margin-right: 10px;
+			top: 2px;
+			margin-left: -15px;
+		}
+		@media screen and (max-width: $break-tablet) {
+			span {
+				font-size: 14px;
+				font-weight: bold;
+			}
+			.fa {
+				font-size: 18px;
+			}
+		}
+	}
+
+	.tml-submit-wrap {
+		.wp-register-submit {
+			margin: 0 auto;
+			display: block;
+		}
+	}
+	.tml-registration-confirmation {
+		font-size: 12px;
+		text-align: center;
+		display: block;
+		margin: 0 0 10px;
+		@media screen and (max-width: $break-tablet) {
+			margin: 10px 0;
+		}
+	}
+}
+body.register {
+	p.message {
+		display: none;
+	}
+	.fb-login-btn-wrap {
+		margin-bottom: 15px;
+	}
+	#registerform {
+		strong {
+			font-size: 14px;
+			display: block;
+			font-weight: normal;
+		}
+		input[name="jetpack_protect_num"] {
+			font-size: 14px;
+			padding: 12px;
+			box-shadow: none;
+			border: 1px solid #DDD;
+			width: 50px;
+			display: inline;
+		}
+	}
+	.tml-submit-wrap {
+		margin-bottom: 10px;
+		.wp-register-submit {
+			display: block;
+			width: 100%;
+			padding: 18px 0;
+			@media screen and (max-width: $break-tablet) {
+				padding: 18px 0;
+			}
+		}
+	}
+	.tml-registration-confirmation {
+		margin-bottom: 30px;
+		color: #999;
+	}
+	.login-page__description {
+		font-size: 17px;
+	}
+	.tml-action-links {
+		width: 100%;
+		display: block;
+		@media screen and (max-width: $break-tablet) {
+			margin: 30px 0 0;
+		}
+		li {
+			width: 100%;
+			margin: 0;
+		}
+		a {
+			opacity: 1;
+			font-size: 14px;
+			font-weight: bold;
+			color: #999;
+			margin: 0 auto;
+			&:hover {
+				text-decoration: underline;
+				color: $primary-color;
+			}
+			@media screen and (max-width: $break-tablet) {
+				color: $primary-color;
+				text-decoration: underline;
+			}
+		}
+	}
+	.tml-user-email-error {
+		font-size: 14px;
+		font-weight: bold;
+		text-align: center;
+		display: block;
+	}
+}
+body.login {
+	#loginform {
+		strong {
+			font-size: 14px;
+			display: block;
+			font-weight: normal;
+		}
+		input[name="jetpack_protect_num"] {
+			font-size: 14px;
+			padding: 12px;
+			box-shadow: none;
+			border: 1px solid #DDD;
+			width: 50px;
+			display: inline;
+		}
+	}
+	.fb-login-btn-wrap {
+		margin-bottom: 15px;
+	}
+	.tml-action-links {
+		width: 100%;
+		display: block;
+		border-top: 1px solid #DDD;
+		li {
+			float: left;
+			width: 50%;
+			height: 50px;
+			margin: 0;
+		}
+		a {
+			opacity: 1;
+			font-size: 14px;
+			font-weight: bold;
+			color: #999;
+			margin: 0 auto;
+			padding-top: 20px;
+			&:hover {
+				text-decoration: underline;
+				color: $primary-color;
+			}
+		}
+	}
+	.tml {
+		.tml-rememberme-wrap {
+			label {
+				font-size: 12px;
+			}
+		}
+		p.message {
+			border-color: rgba($medium-gray, 1);
+			background-color: rgba($light-gray, 1);
+			color: #3f3f3f;
+			line-height: 21px;
+		}
+	}
+	.tml-user-pass-wrap {
+		margin: 0 0 10px;
+	}
+}
+body.lostpassword {
+	p.message {
+		background: transparent;
+		border: none;
+		font-size: 12px;
+		line-height: 16px;
+		padding: 10px 0;
+		font-weight: normal;
+	}
+	#wp-submit {
+		margin: 20px auto;
+		display: block;
+	}
+	.tml-action-links {
+		width: 100%;
+		display: block;
+		border-top: 1px solid #DDD;
+		li {
+			float: left;
+			width: 50%;
+			height: 50px;
+			margin: 0;
+		}
+		a {
+			opacity: 1;
+			font-size: 14px;
+			font-weight: bold;
+			color: #999;
+			margin: 0 auto;
+			padding-top: 20px;
+			&:hover {
+				text-decoration: underline;
+				color: $primary-color;
+			}
+		}
+	}
+}
+body.resetpass {
+	#wp-submit {
+		margin: 0 auto;
+		display: block;
+	}
+	.user-pass1-wrap {
+		p {
+			margin: 0;
+		}
+	}
+}
+
+body.page-template-custom-login, body.page-template-sweepstakes, body.page-template-expecting-login,  body.page-template-custom-skillshare-login, body.page-template-custom-cricket-login {
+	background-image: url('https://www.fatherly.com/wp-content/uploads/2017/01/GettyImages-678751579-2.jpg');
+	background-size: 100%;
+	background-position: 0 50px;
+	background-repeat: no-repeat;
+	@media screen and (max-width: $break-tablet) {
+		background-size: cover;
+		background-position: center -100px;
+	}
+	.login-custom{
+		padding: 50px 0 150px;
+		@media screen and (max-width: $break-tablet) {
+			padding: 20px 0;
+		}
+		&__title {
+			float: none;
+			letter-spacing: 1.5px;
+			color: #FFF;
+			font-size: 42px;
+			border: none;
+			margin-left: auto;
+			margin-right: auto;
+			margin-bottom: 40px;
+			line-height: 48px;
+			text-align: center;
+			text-transform: none;
+			width: 90%;
+			@media screen and (max-width: $break-tablet) {
+				float: none;
+				text-align: center;
+				font-size: 24px;
+				line-height: 28px;
+			}
+		}
+		&__logo {
+			width: 200px;
+			display: block;
+			margin-top: 20px;
+			@media screen and (max-width: $break-tablet) {
+			    margin: 20px auto;
+			}
+		}
+		&__form {
+			float: none;
+			@media screen and (max-width: $break-tablet) {
+				float: none;
+				margin-top: 40px;
+			}
+
+		}
+		.tml-registration-confirmation {
+			color: #FFF;
+			font-weight: bold;
+			@media screen and (max-width: $break-tablet) {
+				color: #FFF;
+			}
+		}
+		.tml {
+			h3 {
+				font-weight: bold;
+				margin-top: 20px;
+			}
+			input[type=text] {
+				font-size: 14px;
+				text-align: center;
+				font-family: $primary-font-family;
+			}
+			input[type=submit]{
+				width: 100%;
+				padding: 15px;
+				font-size: 14px;
+				font-family: $primary-font-family;
+			}
+			.tml-action-links {
+				display: block;
+				text-align: center;
+				li {
+					float: none;
+				}
+				a {
+					color: #FFF;
+					font-size: 14px;
+					text-align: center;
+					@media screen and (max-width: $break-tablet) {
+						color: #999;
+					}
+				}
+			}
+			.fb-login-btn {
+				span {
+					position: relative;
+					text-shadow: none;
+					font-size: 14px;
+					line-height: 32px;
+					letter-spacing: 2px;
+					margin-left: 30px;
+					color: #FFF;
+					opacity: 1;
+					display: block;
+					font-weight: bold;
+					margin: 0;
+				}
+				.fa {
+					font-size: 22px;
+					text-shadow: none;
+					position: relative;
+					line-height: 24px;
+					margin-left: 5px;
+					top: 2px;
+				}
+			}
+		}
+		.tml-user-email-error {
+			font-size: 14px;
+			font-weight: bold;
+			text-align: center;
+			display: block;
+		}
+	}
+}
+
+body.energystar, body.foty {
+	background-image: initial;
+	background-color: #FFF;
+	background-size: 100%;
+	background-position: 0 50px;
+	background-repeat: no-repeat;
+	@media screen and (max-width: $break-tablet) {
+		background-size: cover;
+		background-position: center 0px;
+	}
+	.login-custom {
+		max-width: 100%;
+		padding: 0;
+		margin-top: 0;
+		@media screen and (max-width: $break-tablet) {
+			max-width: 100%;
+			padding: 0;
+			width: 100%;
+			margin: 0;
+		}
+		&__form{
+			margin-top:2rem;
+		}
+	}
+	.egstar {
+		&__cover-image {
+			position: relative;
+			top: 0;
+			left: 0;
+			width: 100%;
+			z-index: 0;
+			display: block;
+			overflow-y: hidden;
+			max-height: 80vh;
+			@media screen and (max-width: $break-tablet) {
+				position: relative;
+				top: 0;
+				left: 0;
+				width: 100%;
+				z-index: 0;
+			}
+			img {
+
+				width: 100%;
+			}
+		}
+		&__sponsor-logos {
+
+		}
+		&__sponsor-list {
+			list-style: none;
+			margin: 0;
+			text-align: center;
+		}
+		&__sponsor-item {
+			padding: 20px;
+			width: 170px;
+			margin: 0 20px;
+			display: inline-block;
+			@media screen and (max-width: $break-tablet) {
+				padding: 10px;
+				width: 100px;
+				margin: 0 10px;
+				display: inline-block;
+			}
+			&--small {
+				width: 70px;
+				padding: 10px;
+				margin: 0 20px;
+				@media screen and (max-width: $break-tablet) {
+					width: 50px;
+					padding: 10px;
+					margin: 0 20px;
+				}
+			}
+		}
+		&__fineprint {
+			font-size: 10px;
+			font-weight: bold;
+			line-height: 21px;
+			text-align: center;
+			padding: 0 30px;
+		}
+		&__copy {
+			text-align: center;
+			font-size: 1rem;
+			line-height: 22px;
+			max-width: 70%;
+			font-weight: 400;
+			margin: 0 auto;
+			padding: 0px 20px 10px;
+			@media screen and (max-width: $break-tablet) {
+				max-width: 96%;
+				font-size: 12px;
+				padding: 10px 20px 10px;
+			}
+		}
+		&__footer-image{
+			img{
+				display: block;
+				max-width: 100%;
+				height: auto;
+				margin:auto;
+				width:600px;
+			}
+		}
+	}
+
+	.login-custom__title {
+		font-family: sans-serif;
+		font-weight: bold;
+		text-transform: uppercase;
+		font-size: 24px;
+		padding-top: 30px;
+		position: absolute;
+		top: 350px;
+		left: 0;
+		width: 100%;
+		.drop-title {
+			display: block;
+			font-size: 44px;
+			@media screen and (max-width: $break-tablet) {
+				display: block;
+				font-size: 24px;
+			}
+		}
+		@media screen and (max-width: $break-tablet){
+			font-size: 20px;
+			top: 90px;
+		}
+	}
+
+
+
+}
+
+
+body.skillshare, body.finimize {
+	background-image: url('https://www.fatherly.com/wp-content/uploads/2017/03/skillshare-cta-bg.jpg');
+    background-position: center -350px;
+    background-size: initial;
+    @media screen and (max-width: $break-tablet){
+		background-position: 33% -300px;
+	}
+}
+body.urbansitter {
+	background-image: url('https://www.fatherly.com/wp-content/uploads/2017/05/fatherly-bg-urbansitter-2.jpg');
+    background-position: center -350px;
+    background-size: initial;
+    @media screen and (max-width: $break-tablet){
+		background-position: 33% -300px;
+	}
+}
+
+body.cricket {
+	background-image: url('https://www.fatherly.com/wp-content/uploads/2017/03/cricket-cta-bg.jpg');
+    background-position: center -100px;
+    background-size: initial;
+    @media screen and (max-width: $break-tablet){
+		background-position: center bottom;
+    }
+    .login-custom {
+    	height: 600px;
+    	@media screen and (max-width: $break-tablet) {
+    		height: auto;
+    	}
+		&__title {
+			font-size: 26px;
+			line-height: 36px;
+			color: #3f3f3f;
+			@media screen and (max-width: $break-tablet) {
+				font-size: 18px;
+				line-height: 24px;
+			}
+		}
+		.tml {
+			h3 {
+				color: #3f3f3f;
+				&:before {
+					background: #3f3f3f;
+				}
+				&:after {
+					background: #3f3f3f;
+				}
+			}
+			.tml-registration-confirmation {
+				color: $primary-color;
+				background: rgba(255,255,255,0.8);
+				border-radius: 3px;
+				border: 1px solid $primary-color;
+			}
+		}
+    }
+}
+
+body.skillshare, body.finimize, body.urbansitter {
+	.login-custom {
+		max-width: 400px;
+		float: right;
+		margin-right: 150px;
+		height: 600px;
+		@media screen and (max-width: $break-tablet) {
+			float: none;
+			max-width: 100%;
+			margin-right: auto;
+			height: auto;
+		}
+		&__title {
+			font-size: 26px;
+			line-height: 36px;
+			@media screen and (max-width: $break-tablet) {
+				font-size: 18px;
+				line-height: 24px;
+			}
+		}
+		.tml {
+			h3 {
+				color: #FFF;
+			}
+		}
+	}
+}
+
+
+body.primary {
+	background-image: url('https://1ehukb3kd764oddub3rdo4uw-wpengine.netdna-ssl.com/wp-content/uploads/2017/04/fatherly-signup-primary-referrer-2.jpg');
+    background-position: center center;
+    background-size: 100%;
+    @media screen and (max-width: $break-tablet){
+		background-position: top center;
+		background-size: initial;
+	}
+	.login-custom {
+		max-width: 400px;
+		float: right;
+		margin-right: 150px;
+		height: 600px;
+		@media screen and (max-width: $break-tablet) {
+			float: none;
+			max-width: 100%;
+			margin-right: auto;
+			height: auto;
+		}
+		&__title {
+			font-size: 26px;
+			line-height: 36px;
+			color: #000;
+			@media screen and (max-width: $break-tablet) {
+				font-size: 18px;
+				line-height: 24px;
+			}
+		}
+		.tml {
+			color: #000;
+			h3 {
+				color: #000;
+			}
+		}
+		.tml-registration-confirmation {
+			color: #000;
+		}
+	}
+}
+
+
+body.page-template-expecting-login {
+	background-image: url('https://www.fatherly.com/wp-content/uploads/2017/01/Pregnancy_Test_Fatherly_Week_3.jpg');
+	.login-custom {
+		.tml {
+			h3 {
+				color: #FFF;
+			}
+		}
+		.tml-user-email-error {
+			color: #FFF;
+		}
+	}
+}

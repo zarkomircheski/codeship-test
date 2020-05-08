@@ -1,0 +1,16 @@
+{
+  "name": "fatherly-amazon-plugin/libs",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "William",
+      "email": "william.wilkerson@fatherly.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "FatherlyPlugin\\APU\\": "classes"
+    }
+  }
+}

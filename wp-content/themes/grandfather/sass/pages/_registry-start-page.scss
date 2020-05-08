@@ -1,0 +1,99 @@
+.page-template-registry-start-page {
+  //remove site header for this page
+  .site-header {
+    display: none;
+  }
+
+  #content {
+    padding-top: 0 !important;
+  }
+}
+
+
+.registry-start-page  {
+  margin: 0 auto;
+  max-width: 1000px;
+
+  &-lead {
+    position: relative;
+
+    &-image {
+      &:after {
+        display: block;
+        position: absolute;
+        bottom: -1px;
+        right: 0;
+        border-bottom: 93px solid white;
+        border-left: 1500px solid transparent;
+        content: '';
+
+        @media (max-width: $break-1000) {
+          border-left: 1000px solid transparent;
+        }
+        @media (max-width: $break-small) {
+          border-bottom: 65px solid white;
+          border-left: 600px solid transparent;
+        }
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+
+    &-button {
+      position: absolute;
+      right: 25px;
+      bottom: 60px;
+      width: 48px;
+      height: 48px;
+      border-radius: 35px;
+      box-shadow: 0 3px 4px 0 rgba(0,0,0,0.14), 0 3px 3px -2px rgba(0,0,0,0.12), 0 1px 8px 0 rgba(0,0,0,0.2);
+      background-color: $fth-red;
+
+      @media (max-width: $break-small) {
+        bottom: 38px;
+      }
+
+      &-arrow {
+        display: inline-block;
+        margin: 15px 0 0 14px;
+        transform: rotate(-45deg);
+        border: solid #fff;
+        border-width: 0 4px 4px 0;
+        padding: 6px;
+      }
+    }
+  }
+
+  &-content {
+    margin: 20px auto;
+    max-width: 800px;
+
+    &-branded-image {
+      margin: 0 auto;
+      max-width: 250px;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    &-cta {
+      @include freight(18px, 23px);
+      margin: 20px auto 0 auto;
+      width: calc(100% - 40px);
+      text-align: center;
+      letter-spacing: .2pt;
+
+      &-button {
+        @include marr-sans(20px, 43px);
+        margin: 40px auto 0 auto;
+        max-width: calc(100% - 40px );
+        text-align: center;
+        color: $white;
+        background-color: $fth-red;
+      }
+    }
+  }
+}

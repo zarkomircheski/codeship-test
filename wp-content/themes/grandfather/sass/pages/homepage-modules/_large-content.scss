@@ -1,0 +1,228 @@
+.large-content {
+  margin-top: 40px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  background: #fff;
+  @media (max-width: 800px) {
+    flex-wrap: wrap;
+  }
+
+  // Check if user is on IE10 or IE11
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    align-items: center;
+  }
+
+  &-category {
+    margin-left: .5em;
+    margin-bottom: 5px;
+    &-text {
+      position: relative;
+      top: 1px;
+      display: inline-block;
+    }
+  }
+
+  &-image {
+    position: relative;
+    width: 50%;
+    @media (max-width: $break-800) {
+      width: calc(100% - 40px);
+      margin: auto;
+    }
+  }
+
+  &-quote {
+    position: relative;
+    @include freight(28px);
+    @media (max-width: 900px) {
+      font-size: 20px;
+    }
+
+    &:before {
+      margin-left: -40px;
+      top: -12px;
+      position: absolute;
+      content: '\201c';
+      @include marr-sans(70px);
+      color: $fth-red;
+
+      @media (max-width: 900px) {
+        font-size: 55px;
+      }
+    }
+
+    & ~ .large-content-dek {
+      .large-content-title {
+        @include freight-bold(17px);
+      }
+
+      .large-content-summary {
+        @include freight(18px);
+      }
+    }
+  }
+  &-dek {
+    margin-bottom: 10px;
+  }
+
+  &-borders {
+    margin: 30px 0 20px 0;
+    max-width: 100px;
+    border: 1px solid;
+  }
+
+  &-description {
+    width: 50%;
+    margin: auto;
+    padding-left: 30px;
+    @media (max-width: 900px) {
+      padding-left: 15px;
+    }
+    @media (max-width: $break-800) {
+      margin: 10px auto;
+      padding-left: 5px;
+      width: calc(100% - 40px);
+    }
+  }
+
+  &-arrow {
+    color: $fth-red;
+  }
+
+  &-info {
+    line-height: 1em;
+    margin-left: 25px;
+    max-width: 330px;
+
+    @media (max-width: $break-800) {
+      margin: 0 auto 30px auto;
+      padding-left: 15px;
+      max-width: 300px;
+    }
+  }
+
+  &-title {
+    @include marr-sans(27px);
+    margin-top: .3em;
+  }
+
+  &-summary {
+    @include freight(25px);
+  }
+
+  &-author {
+    position: absolute;
+    bottom: 20px;
+    margin-left: 25px;
+
+    @media (max-width: $break-800) {
+      margin: 20px auto 0 auto;
+      bottom: 10px;
+      position: relative;
+      max-width: 300px;
+      width: 100%;
+    }
+  }
+
+  &-logo {
+    position: absolute;
+    top: 20px;
+    margin-left: 25px;
+    width: 25px;
+
+    @media (max-width: $break-800) {
+      display: none;
+    }
+
+    &-bottom {
+      top: unset;
+      bottom: 20px;
+      left: 92%;
+      @media (max-width: $break-800) {
+        margin-left: -20px;
+        display: block;
+      }
+    }
+
+  }
+
+  &.variant_5 {
+    padding: 40px 0;
+    background-color: $homepage-background;
+    @media (max-width: $break-800) {
+      padding-top: 0;
+    }
+
+    .large-content {
+
+      &-image {
+        margin-left: 0;
+        max-width: 350px;
+        @media (max-width: $break-800) {
+          max-width: 100%;
+          width: 100%;
+        }
+      }
+
+      &-description {
+        width: auto;
+        margin: 0 0 0 40px;
+        @media (max-width: $break-800) {
+          margin: 0;
+        }
+      }
+
+      &-quote {
+        font-size: 25px;
+        line-height: 1em;
+        @media (max-width: $break-800) {
+          padding-top: 25px;
+        }
+
+        &:before {
+          top: -14px;
+          font-size: 60px;
+        }
+      }
+
+      &-borders {
+        margin-top: 50px;
+      }
+
+      &-info {
+        max-width: 250px;
+        @media (max-width: 600px) {
+          max-width: calc(100% - 50px);
+        }
+      }
+
+      &-dek {
+        @media (max-width: 600px) {
+          max-width: 180px;
+        }
+      }
+
+      &-author {
+        bottom: 40px;
+        @media (max-width: $break-800) {
+          bottom: 10px;
+        }
+        @media (max-width: 600px) {
+          max-width: calc(100% - 50px);
+        }
+      }
+
+      &-logo-bottom {
+        left: 83%;
+        bottom: 40px;
+        @media (max-width: 1040px) {
+          right: 0;
+        }
+        @media (max-width: $break-800) {
+          left: 95%;
+        }
+      }
+    }
+  }
+}

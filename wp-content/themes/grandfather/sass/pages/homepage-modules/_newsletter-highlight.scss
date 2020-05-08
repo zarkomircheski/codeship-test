@@ -1,0 +1,48 @@
+.module-newsletter-highlight {
+  width: 100%;
+  background-color: $gallery;
+  border-top: solid 6px $fth-red;
+  text-align: center;
+
+  &-title {
+    @include marr-sans(30px);
+    margin: 20px auto 0 auto;
+    max-width: 400px;
+    color: $fth-black;
+  }
+
+  &-bar {
+    width: 40px;
+    height: 6px;
+    background-color: $fth-red;
+    margin: 20px auto 0 auto;
+  }
+
+  &-body {
+    max-width: 550px;
+    margin: 20px auto 0 auto;
+
+    p {
+      a {
+        border: none;
+        color: $fth-red;
+      }
+    }
+  }
+
+  &-form {
+    max-width: 550px;
+    margin: 20px auto 0 auto;
+    padding-bottom: 20px;
+
+    @media (max-width: $break-small) {
+      padding-bottom: 100px;
+    }
+
+    &-inputs {
+      position: relative;
+      height: 50px;
+      border: solid 1px rgba(63, 63, 63, 0.05);
+    }
+  }
+}

@@ -1,0 +1,115 @@
+name,term_taxonomy_id,taxonomy,post_count,action,target_taxonomy,target_name,notes
+Gear,3937,post_tag,776,remove and redirect,category,gear,Categorize with category of same name. Redirect tag page to category page.
+Kids,3580,post_tag,629,remove only,post_tag,kids,Just remove.
+Product Collection,3236,post_tag,434,remove only,post_tag,product-collection,Categorize with category of same name. Redirect tag page to category page.
+Preschool,3285,post_tag,386,remove and redirect stage,stages,preschool,Categorize with category of same name. Redirect tag page to category page.
+Toys,3703,post_tag,351,remove and redirect,category,toys,Categorize with category of same name. Redirect tag page to category page.
+play,3629,post_tag,338,remove and redirect,category,play,Categorize with category of same name. Redirect tag page to category page.
+health and science,3655,post_tag,322,remove and redirect,category,health-science,Categorize with category of same name. Redirect tag page to category page.
+Parenting,3538,post_tag,308,remove and redirect,category,parenting,Categorize with category of same name. Redirect tag page to category page.
+Baby,4254,post_tag,296,remove and redirect stage,stages,baby,Make sure “staged” with stage of same name. Redirect tag page to stage page.
+Tech,3675,post_tag,246,remove and redirect,category,tech,Categorize with category of same name. Redirect tag page to category page.
+Age 0-1 Years Old,3227,post_tag,218,remove and redirect stage,stages,baby,Make sure “staged” with stage “Baby”. Redirect tag page to “Baby” stage page.
+Adult Gear,3684,post_tag,192,remove and redirect,category,gear,Categorize with “Gear”. Redirect tag page to category page.
+Love and Money,3747,post_tag,183,remove and redirect,category,love-money,Categorize with category of same name. Redirect tag page to category page.
+Expecting,3226,post_tag,166,remove and redirect stage,stages,trying-expecting,Make sure “staged" with “Trying & Expecting”. Redirect tag page to stage page.
+sponsored,3434,post_tag,152,remove and redirect,category,,Make sure “sponsored” flag is true.
+health,3618,post_tag,138,remove and redirect,category,health-science,Categorize as “Health & Science”. Redirect tag page to “Health & Science” cat page.
+movies,3627,post_tag,129,remove and redirect,category,movies,Categorize with category of same name. Redirect tag page to category page.
+sports,3640,post_tag,128,remove and redirect,category,sports,Categorize with category of same name. Redirect tag page to category page.
+Ages And Stages,3239,post_tag,119,remove and redirect,category,parenting,
+Relationships,3680,post_tag,114,remove and redirect,category,relationships,Categorize with category of same name. Redirect tag page to category page.
+Psychology,3687,post_tag,111,remove and redirect,category,psychology,Categorize with category of same name. Redirect tag page to category page.
+Sleep,3410,post_tag,108,remove and redirect,category,sleep,Categorize with category of same name. Redirect tag page to category page.
+Age 1-2 Years Old,3192,post_tag,100,remove and redirect stage,stages,toddler,Make sure “staged” with stage “Toddler”. Redirect tag page to “Toddler” stage page.
+education,3620,post_tag,100,remove and redirect,category,education,
+Outdoors,3940,post_tag,94,remove and redirect,category,outdoors,
+sex,3697,post_tag,94,remove and redirect,category,sex,
+discipline,3741,post_tag,88,remove and redirect,category,discipline-and-behavior	,
+Games,3781,post_tag,87,remove and redirect,category,play,“Play” category. More specific sub-cats apply but no more bulk action applicable.
+apps,3776,post_tag,85,remove and redirect,category,tech,Gear/Tech cat with redirect.
+baseball,3635,post_tag,78,remove and redirect,category,baseball,
+Cars,3938,post_tag,78,remove and redirect,category,cars,
+TV,3682,post_tag,74,remove and redirect,category,tv,
+Diy Projects,3204,post_tag,73,merge,post_tag,diy,Merge with tag:”DIY"
+Age 1-2,3559,post_tag,71,remove and redirect stage,stages,toddler,Make sure “staged” with stage “Toddler”. Redirect tag page to “Toddler” stage page.
+Development,3936,post_tag,69,remove and redirect,category,development,
+Parenting Gear,4195,post_tag,69,remove and redirect,category,parenting-gear,
+activities,3878,post_tag,66,remove and redirect,category,activities,
+Baby Gear,3683,post_tag,65,remove and redirect,category,baby-gear,Gear/Baby
+love,3698,post_tag,63,remove and redirect,category,love-money,Love & Money
+Football,3249,post_tag,59,remove and redirect,category,football,
+Politics,3716,post_tag,59,remove and redirect,category,politics,
+food,3908,post_tag,58,remove and redirect,category,food,
+Trying,3441,post_tag,58,remove and redirect stage,stages,trying-expecting,
+Physical Development,3193,post_tag,55,remove and redirect,category,development,Development
+communication,3886,post_tag,54,remove and redirect,category,communication,
+Safety,3922,post_tag,54,remove and redirect,category,safety,
+Video Games,3633,post_tag,52,remove and redirect,category,video-games,
+Home,4014,post_tag,51,remove and redirect,category,home,
+Pregnant Expecting,3438,post_tag,50,remove and redirect stage,stages,trying-expecting,“Trying & Expecting”
+music,3624,post_tag,49,remove and redirect,category,music,
+Strollers,3306,post_tag,49,remove and redirect,category,strollers,
+Baby Food And Nutrition,3195,post_tag,48,remove and redirect,category,nutrition,Delete and categorize as "Nutrition"
+Behavior,3742,post_tag,48,remove and redirect,category,behavior,
+books,3709,post_tag,48,remove and redirect,category,books,
+Television,3639,post_tag,48,remove and redirect,category,tv,
+Pregnancy,3540,post_tag,46,remove and redirect stage,stages,trying-expecting,Also stage “Trying & Expecting”?
+Fatherhood,3720,post_tag,45,remove only,post_tag,fatherhood,
+Hiking And Camping,3210,post_tag,44,remove and redirect,category,camping,“Camping”
+Pets,3313,post_tag,43,remove and redirect,category,pets,
+Finances,3757,post_tag,42,remove and redirect,category,finances,
+Father Daughter Relationships,3218,post_tag,41,remove and redirect,category,"father-and-child-relationships, daughters",“Father & Child Relationships” & “Parenting/Daughters”
+Camping Gear,3689,post_tag,40,remove and redirect,category,outdoors,“Gear/Outdoors”
+infant,3650,post_tag,38,remove and redirect stage,stages,baby,“Baby”
+travel,3722,post_tag,38,remove and redirect,category,travel,
+toddlers,4382,post_tag,35,remove and redirect stage,stages,toddler,“Toddler”
+Gift Guide,3818,post_tag,34,remove and redirect,category,gift-guides,
+Ball Games And Sports,3211,post_tag,33,remove only,post_tag,ball-games-and-sports,Remove
+nutrition,3617,post_tag,33,remove and redirect,category,nutrition,
+Gift Guides,4202,post_tag,32,remove and redirect,category,gift-guides,
+Basketball,3248,post_tag,31,remove and redirect,category,basketball,
+entertainment,3628,post_tag,31,remove only,post_tag,entertainment,Remove
+Soccer,3250,post_tag,31,remove and redirect,category,soccer,
+Camping,4175,post_tag,30,remove and redirect,category,camping,
+science,4002,post_tag,30,remove and redirect,category,health-science,“Health & Science”
+wellness,3661,post_tag,29,remove and redirect,category,wellness,
+Age 1,3548,post_tag,27,remove and redirect stage,stages,toddler,“Toddler”
+Work,3677,post_tag,26,remove and redirect,category,work-money,
+culture,4000,post_tag,24,remove and redirect,category,culture,
+Sex Advice,3746,post_tag,24,remove and redirect,category,sex,“Love & Money / Sex”
+Baby Monitors,3897,post_tag,23,remove and redirect,category,baby-monitors,
+Bikes,3843,post_tag,23,remove and redirect,category,bikes,
+Sickness and Allergies,4313,post_tag,22,remove and redirect,category,sickness-and-allergies,
+Age 4-5 Years Old,3213,post_tag,20,remove only,post_tag,children-age-4-years-old-milestones-deveopment,
+neuroscience,3992,post_tag,20,remove and redirect,category,neuroscience,
+advice,4371,post_tag,19,merge,post_tag,fatherly-advice,Merge with tag:“Fatherly Advice”?
+Age 2-3 Years Old,3229,post_tag,19,merge,stages,preschool,Stage: Toddlers or Preschool?
+Age 3 - 4 Years Old,3230,post_tag,19,remove and redirect stage,stages,preschool,“Preschool”
+Financial Decisions,3758,post_tag,19,remove and redirect,category,finances,“Love & Money / Finances”
+Ages 5 Years And Up,3423,post_tag,18,merge,stages,big-kid,“Big Kids” or “Tween & Teen”?
+Baby Carriers,3307,post_tag,17,remove and redirect,category,baby-carriers,
+Cameras,3721,post_tag,17,remove and redirect,category,cameras,
+Religion,3243,post_tag,17,remove and redirect,category,religion,
+Diaper Bags,3759,post_tag,15,remove and redirect,category,diaper-bags,
+Genetics,3626,post_tag,15,remove and redirect,category,genetics,
+Baby Strollers,4360,post_tag,13,remove and redirect,category,strollers,“Gear / Strollers”
+funny,4076,post_tag,11,merge,post_tag,humor,Merge with Humor. Delete.
+love+money,3646,post_tag,11,remove and redirect,category,love-money,
+anger management,3644,post_tag,10,merge,post_tag,anger,Merge with tag:anger
+Fathers and Sons,3542,post_tag,10,remove and redirect,category,"father-and-child-relationships,sons",“Father & Child Relationships” & “Parenting/Sons”
+Jimmy Kimmel Live,3999,post_tag,9,merge,post_tag,jimmy-kimmel,Merge with tag:"Jimmy Kimmel”
+home finances,3844,post_tag,8,remove and redirect,category,finances,“Love & Money / Finances”
+finance,3814,post_tag,7,remove and redirect,category,finances,“Love & Money / Finances”
+sickness,3934,post_tag,7,remove and redirect,category,sickness-and-allergies,“Sickness & Allergies”
+Ages 10+,3443,post_tag,5,remove and redirect stage,stages,tween-teen,“Tween & Teen”
+teenagers,4043,post_tag,5,remove and redirect stage,stages,tween-teen,“Tween & Teen”
+Age 5-6,3536,post_tag,4,remove and redirect stage,stages,big-kid,“Big Kids”
+Bill Nye Saves the World,3766,post_tag,2,merge,post_tag,bill-nye,Merge with tag:”Bill Nye”
+Sickness &amp; Allergies,4289,post_tag,2,remove and redirect,category,sickness-and-allergies,
+The Tonight Show,3796,post_tag,6,merge,post_tag,jimmy-fallon,Merge with Jimmy Fallon
+Little League World Series,4295,post_tag,6,merge,post_tag,little-league,Merge with Little League
+Schooling,3315,post_tag,7,remove and redirect,category,education,Love & Money / Education
+Vehicles,3658,post_tag,9,remove and redirect,category,cars,Gear / Cars
+charity,3803,post_tag,9,merge,post_tag,philanthropy,Merge with philanthrop
+Flying With Kids And Babies,3273,post_tag,12,remove and redirect,category,travel,This is travel for us.
