@@ -4,3 +4,6 @@
 - name: test-lint-js
   service: codeship-example-php
   command: npm run lint-js -- --quiet
+- name:  codeship-deploy
+  service: codeship-example-php
+  command: ./deploy_script.sh

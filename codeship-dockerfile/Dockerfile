@@ -7,7 +7,7 @@ COPY ./composer.json /var/www/composer.json
 RUN cd /tmp/
 
 # Update apk and install needed tools
-RUN apk --no-cache --update add curl git
+RUN apk --no-cache --update add curl git ca-certificates openssh-client
 
 # Install nodejs for building frontend assets
 RUN apk --no-cache add nodejs nodejs-npm
@@ -63,5 +63,5 @@ RUN npm i -g eslint
 RUN rm -rf /var/cache/apk/* && \
     rm -rf /tmp/*
 
-
+COPY ./deploy_script.sh /var/www/deploy_script.sh
 
