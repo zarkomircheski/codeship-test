@@ -1,16 +1,13 @@
 FROM alpine:3.9.6
 
-# Copy config files for linter and composer
-COPY ./.eslintrc.json /var/www/.selintrc.json
-COPY ./composer.json /var/www/composer.json
-
 RUN cd /tmp/
+
+# Copy config files
+# COPY ./.eslintrc.json /var/www/.selintrc.json
+# COPY ./package.json /var/www/package.json
 
 # Update apk and install needed tools
 RUN apk --no-cache --update add curl git ca-certificates openssh-client
-
-# Install nodejs for building frontend assets
-RUN apk --no-cache add nodejs nodejs-npm
   
 # Install php
 RUN apk --no-cache add \
@@ -50,18 +47,20 @@ RUN ln -s /etc/php7 /etc/php && \
 # Install composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
+# Install nodejs for building frontend assets
+RUN apk --no-cache add nodejs nodejs-npm
+
 WORKDIR /var/www/
 
-# Install composer packages
-RUN composer install --prefer-dist --no-scripts --no-dev --no-autoloader && rm -rf /root/.composer
-RUN composer dump-autoload --no-scripts --no-dev --optimize
-
-# Install eslint
-RUN npm i -g eslint
+# Install gulp, eslint & dependencies
+# RUN npm install
+#RUN npm i -g eslint \
+#            eslint-plugin-import@^2.20.1 \
+#            @typescript-eslint/eslint-plugin@^2.24.0 \
+#            eslint-config-airbnb-typescript \
+#            gulp-cli \
+#            --save-dev
 
 # Remove cache and tmp files
 RUN rm -rf /var/cache/apk/* && \
     rm -rf /tmp/*
-
-COPY ./deploy_script.sh /var/www/deploy_script.sh
-

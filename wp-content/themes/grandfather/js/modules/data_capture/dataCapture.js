@@ -130,13 +130,13 @@ $('body').on('touchend', '.email-submit.flyout.show:not(.overlayed)', (e) => {
 
 // Add form so user can add an additional child
 $('.data-collection-info-buttons-add').on('touchend click', (e) => {
-  let newForm = `<div class="data-collection-info-form-child child-${count}">` +
-    `<input type="date" name="dob-${count}" min="2000-01-01" max="2022-01-01" required>` +
-    '<div class="data-collection-info-form-child-gender">' +
-    `<input type="radio" name="gender-${count}" value="male" required><span>Girl</span>` +
-    `<input type="radio" name="gender-${count}" value="female" required><span>Boy</span>` +
-    `<input type="radio" name="gender-${count}" value="other" required><span>Other</span>` +
-    `<input type="radio" name="gender-${count}" value="notSure" required><span>Not Sure</span></div></div>`;
+  let newForm = `<div class="data-collection-info-form-child child-${count}">`
+    + `<input type="date" name="dob-${count}" min="2000-01-01" max="2022-01-01" required>`
+    + '<div class="data-collection-info-form-child-gender">'
+    + `<input type="radio" name="gender-${count}" value="male" required><span>Girl</span>`
+    + `<input type="radio" name="gender-${count}" value="female" required><span>Boy</span>`
+    + `<input type="radio" name="gender-${count}" value="other" required><span>Other</span>`
+    + `<input type="radio" name="gender-${count}" value="notSure" required><span>Not Sure</span></div></div>`;
 
   // Add new form before the add a child button
   $(e.currentTarget).parent().parent().find('form')

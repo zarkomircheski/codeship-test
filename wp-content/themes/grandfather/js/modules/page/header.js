@@ -153,10 +153,10 @@ const header = {
       let $articleTitle = $(this).find('.article__leaderboard');
       let scrollBottom = $(window).scrollTop() + $(window).height();
 
-      if (scrollBottom > $articleTitle.offset().top &&
-        scrollBottom < $(this).offset().top + $(this).height() &&
-        !$('body').hasClass('single-sweepstakes') && $('body').data('currentArticle') &&
-        $('body').data('currentArticle') != $(this).attr('id')
+      if (scrollBottom > $articleTitle.offset().top
+        && scrollBottom < $(this).offset().top + $(this).height()
+        && !$('body').hasClass('single-sweepstakes') && $('body').data('currentArticle')
+        && $('body').data('currentArticle') != $(this).attr('id')
       ) {
         let articleUrl = $(`#${$(this).attr('id')}`).attr('data-url'),
           baseUrl = `${window.location.protocol}//${window.location.hostname}/`,
@@ -219,11 +219,10 @@ const header = {
     const share_url = $(elem).prop('href');
     const post_title = `${$(elem).attr('data-title')} - `;
     const post_url = $(elem).attr('data-url');
-    const post_utm =
-      `?utm_source=${
-        $(elem)
-          .data('platform')
-          .toLowerCase()}`;
+    const post_utm = `?utm_source=${
+      $(elem)
+        .data('platform')
+        .toLowerCase()}`;
 
     let url = share_url;
     if ($(elem).data('platform') == 'Twitter') url += post_title;
@@ -287,10 +286,10 @@ const header = {
     let last_scroll_top = 0;
     $(window).scroll(() => {
       if (
-        app.header.mobile_menu.status === false &&
-        app.header.search.status === false &&
-        app.header.mobile_email_menu.status === false &&
-        app.wm.width <= 980
+        app.header.mobile_menu.status === false
+        && app.header.search.status === false
+        && app.header.mobile_email_menu.status === false
+        && app.wm.width <= 980
       ) {
         const scroll_top = $(window).scrollTop();
 

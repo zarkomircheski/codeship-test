@@ -15,13 +15,13 @@ $(document).ready(() => {
       let recircHtml = document.createElement('div');
       let content = '';
       for (let i = 0; i < 2; i++) {
-        content += '<div class="recirculation-content-item">' +
-          '<div class="recirculation-content-item-image">' +
-          `<a href="${trending.data[i].url}" data-ev-loc="Article - Body" data-ev-name="Recirculation - Image">` +
-          `<img class="recirculation-item-image" src="${trending.data[i].thumb_url_medium}?w=60"></a></div>` +
-          '<div class="recirculation-content-item-title">' +
-          `<a href="${trending.data[i].url}" data-ev-loc="Article Body" data-ev-name="Recirculation - Headline">` +
-          `${trending.data[i].title}</a></div></div>`;
+        content += '<div class="recirculation-content-item">'
+          + '<div class="recirculation-content-item-image">'
+          + `<a href="${trending.data[i].url}" data-ev-loc="Article - Body" data-ev-name="Recirculation - Image">`
+          + `<img class="recirculation-item-image" src="${trending.data[i].thumb_url_medium}?w=60"></a></div>`
+          + '<div class="recirculation-content-item-title">'
+          + `<a href="${trending.data[i].url}" data-ev-loc="Article Body" data-ev-name="Recirculation - Headline">`
+          + `${trending.data[i].title}</a></div></div>`;
       }
       recircHtml.innerHTML = content;
       $recirculation.append(recircHtml);
@@ -32,12 +32,12 @@ $(document).ready(() => {
       let content = '<h2 class="trending-title">Trending Now</h2>';
       if (trending.success) {
         for (let article in trending.data) {
-          content += '<a data-ev-loc="Right Rail" data-ev-name="Recirculation" data-ev-val="' +
-            `${trending.data[article].url}" href="${trending.data[article].url}">` +
-            '<div class="trending-item">' +
-            `<img class="trending-item-image" src="${trending.data[article].thumb_url_medium}">` +
-            `<div class="trending-item-title">${trending.data[article].title}</div>` +
-            '</div></a>';
+          content += '<a data-ev-loc="Right Rail" data-ev-name="Recirculation" data-ev-val="'
+            + `${trending.data[article].url}" href="${trending.data[article].url}">`
+            + '<div class="trending-item">'
+            + `<img class="trending-item-image" src="${trending.data[article].thumb_url_medium}">`
+            + `<div class="trending-item-title">${trending.data[article].title}</div>`
+            + '</div></a>';
         }
         trendingHtml.innerHTML = content;
         $('.article__body-rail-trending').append(trendingHtml);

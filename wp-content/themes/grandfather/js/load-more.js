@@ -86,7 +86,7 @@ $(window).on('load', () => {
 
     // Remove pinned item if it is the first article
     if (pinned.includes(String(excludesFE[0]))) {
-      pinned = pinned.filter(a => a !== excludesFE[0]);
+      pinned = pinned.filter((a) => a !== excludesFE[0]);
     }
 
     /**

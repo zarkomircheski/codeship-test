@@ -80,7 +80,7 @@ const IntersectionObserver = require('intersection-observer-polyfill/dist/Inters
       this.observer = new IntersectionObserver(observeEntries, thresholds);
     }
 
-    this.sentinels.forEach(sentinel => this.observer.observe(sentinel));
+    this.sentinels.forEach((sentinel) => this.observer.observe(sentinel));
   }
 
   module.exports = scrollTrigger;

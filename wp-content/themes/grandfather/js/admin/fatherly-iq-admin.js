@@ -24,7 +24,7 @@
             $('.fatherly-iq').append(res);
           } else {
             res = JSON.parse(res);
-            let csvContent = `data:text/csv;charset=utf-8,${res.map(e => e.join(',')).join('\n')}`;
+            let csvContent = `data:text/csv;charset=utf-8,${res.map((e) => e.join(',')).join('\n')}`;
 
             let encodedUri = encodeURI(csvContent);
             window.location.href = encodedUri;

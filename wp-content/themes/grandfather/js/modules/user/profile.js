@@ -123,9 +123,9 @@ const profile = {
   hide_trying(elem, val) {
     var val = $(elem).val();
     if (
-      val == '' &&
-      app.profile.is_trying_checked() == false &&
-      app.profile.is_trying_visible() == false
+      val == ''
+      && app.profile.is_trying_checked() == false
+      && app.profile.is_trying_visible() == false
     ) {
       $(elem)
         .parent()

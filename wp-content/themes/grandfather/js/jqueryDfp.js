@@ -469,8 +469,8 @@ let dfpID = '',
               let refreshcount = 1;
               let variable = 'desktop_refresh_'.concat(desktopRefreshSlots[adSlot]);
               let refreshAd = setInterval(() => {
-                if (window[variable] && utilities.is_in_viewport($adUnit[0]) &&
-                  window.outerWidth > 999 && refreshcount < 51 && !document.hidden) {
+                if (window[variable] && utilities.is_in_viewport($adUnit[0])
+                  && window.outerWidth > 999 && refreshcount < 51 && !document.hidden) {
                   googleAdUnit.setTargeting('refreshcount', refreshcount);
                   googletag.pubads().refresh([googleAdUnit]);
                   refreshcount++;
@@ -486,8 +486,8 @@ let dfpID = '',
               let refreshcount = 1;
               let variable = 'mobile_refresh_'.concat(mobileRefreshSlots[adSlot]);
               let refreshAd = setInterval(() => {
-                if (window[variable] && utilities.is_in_viewport($adUnit[0]) &&
-                  window.outerWidth < 600 && refreshcount < 51 && !document.hidden) {
+                if (window[variable] && utilities.is_in_viewport($adUnit[0])
+                  && window.outerWidth < 600 && refreshcount < 51 && !document.hidden) {
                   googleAdUnit.setTargeting('refreshcount', refreshcount);
                   googletag.pubads().refresh([googleAdUnit]);
                   refreshcount++;
@@ -521,8 +521,8 @@ let dfpID = '',
 
       const { setLocation } = dfpOptions;
       if (typeof setLocation === 'object') {
-        if (typeof setLocation.latitude === 'number' && typeof setLocation.longitude === 'number' &&
-          typeof setLocation.precision === 'number') {
+        if (typeof setLocation.latitude === 'number' && typeof setLocation.longitude === 'number'
+          && typeof setLocation.precision === 'number') {
           pubadsService.setLocation(setLocation.latitude, setLocation.longitude, setLocation.precision);
         } else if (typeof setLocation.latitude === 'number' && typeof setLocation.longitude === 'number') {
           pubadsService.setLocation(setLocation.latitude, setLocation.longitude);
@@ -580,8 +580,8 @@ let dfpID = '',
         // if the div has been collapsed but there was existing content expand the
         // div and reinsert the existing content.
         const $existingContent = $adUnit.data('existingContent');
-        if (display === 'none' && $.trim($existingContent).length > 0 &&
-          dfpOptions.collapseEmptyDivs === 'original') {
+        if (display === 'none' && $.trim($existingContent).length > 0
+          && dfpOptions.collapseEmptyDivs === 'original') {
           $adUnit.show().html($existingContent);
           display = 'block display-original';
         }

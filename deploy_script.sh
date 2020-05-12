@@ -2,6 +2,11 @@
 # If any commands fail (exit code other than 0) entire script exits
 # set -e
 
+# run gulp tasks
+npx gulp prod
+
+#push to repo
+
 CI_COMMITTER_EMAIL=codechip@test.com
 CI_COMMITTER_NAME=codeship_ci
 USERNAME=zarkomircheski

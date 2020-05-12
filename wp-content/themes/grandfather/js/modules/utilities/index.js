@@ -9,8 +9,8 @@ const utilities = {
     } else if ($('body').hasClass('single')) {
       page = 'single';
     } else if (
-      $('body').hasClass('category') ||
-      $('body').hasClass('page-template-page-landing')
+      $('body').hasClass('category')
+      || $('body').hasClass('page-template-page-landing')
     ) {
       page = 'category';
     } else if ($('body').hasClass('tag')) {
@@ -111,10 +111,10 @@ const utilities = {
     const rect = element.getBoundingClientRect();
     const html = document.documentElement;
     return (
-      rect.top >= 0 &&
-      rect.left >= 0 &&
-      Math.floor(rect.bottom) <= (window.innerHeight || html.clientHeight) &&
-      Math.floor(rect.right) <= (window.innerWidth || html.clientWidth)
+      rect.top >= 0
+      && rect.left >= 0
+      && Math.floor(rect.bottom) <= (window.innerHeight || html.clientHeight)
+      && Math.floor(rect.right) <= (window.innerWidth || html.clientWidth)
     );
   },
 };
