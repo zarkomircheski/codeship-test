@@ -2,10 +2,6 @@ FROM alpine:3.9.6
 
 RUN cd /tmp/
 
-# Copy config files
-# COPY ./.eslintrc.json /var/www/.selintrc.json
-# COPY ./package.json /var/www/package.json
-
 # Update apk and install needed tools
 RUN apk --no-cache --update add curl git ca-certificates openssh-client
   
@@ -51,15 +47,6 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 RUN apk --no-cache add nodejs nodejs-npm
 
 WORKDIR /var/www/
-
-# Install gulp, eslint & dependencies
-# RUN npm install
-#RUN npm i -g eslint \
-#            eslint-plugin-import@^2.20.1 \
-#            @typescript-eslint/eslint-plugin@^2.24.0 \
-#            eslint-config-airbnb-typescript \
-#            gulp-cli \
-#            --save-dev
 
 # Remove cache and tmp files
 RUN rm -rf /var/cache/apk/* && \

@@ -13,7 +13,7 @@ USERNAME=zarkomircheski
 TOKEN=e37452bad8c6149033514d87a2923e314e19a836
 REPO=codeship-test
 
-git remote add ${REPO} https://${USERNAME}:${TOKEN}@github.com/${USERNAME}/${REPO}.git
+git remote add ${REPO} https://${TOKEN}@github.com/${USERNAME}/${REPO}.git
 
 git config --global user.email CI_COMMITTER_EMAIL
 git config --global user.name CI_COMMITTER_NAME
