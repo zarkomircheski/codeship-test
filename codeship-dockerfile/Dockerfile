@@ -46,8 +46,32 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 # Install nodejs for building frontend assets
 RUN apk --no-cache add nodejs nodejs-npm
 
-WORKDIR /var/www/
+
+# Make directories for composer and node packages
+RUN mkdir /var/www/
+RUN mkdir /var/www/app/
+RUN mkdir /var/www/composer_packages/
+RUN mkdir /var/www/node_packages/
+
+# Copy config files for linter and composer
+COPY ./package.json /var/www/node_packages/package.json
+COPY ./.eslintrc.json /var/www/node_packages/.selintrc.json
+COPY ./composer.json /var/www/composer_packages/composer.json
+
+
+
+# Install node packages
+RUN cd /var/www/node_packages && npm install
+
+# Install composer packages
+RUN cd /var/www/composer_packages && composer install --prefer-dist --no-scripts --no-autoloader && rm -rf /root/.composer
+RUN cd /var/www/composer_packages && composer dump-autoload --no-scripts --optimize
 
 # Remove cache and tmp files
 RUN rm -rf /var/cache/apk/* && \
     rm -rf /tmp/*
+
+WORKDIR /var/www/
+
+# TRY INSTALLING NPM PACKAGES GLOBALLY ON BUILD, THAN SYMLINK THE NODE_MODULES IN PROJECT DIR ON RUN "build_script"
+# DONT FORGET TO INCLUDE CONFIG FILES IN DOCKERFILE
