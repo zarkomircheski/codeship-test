@@ -6,4 +6,4 @@
   command: "./app/test_script.sh"
 - name:  codeship-deploy
   service: codeship-example-php
-  command: "./deploy_script.sh"
+  command: "./app/deploy_script.sh"
