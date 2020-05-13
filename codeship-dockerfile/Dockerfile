@@ -71,7 +71,7 @@ RUN cd /var/www/composer_packages && composer dump-autoload --no-scripts --optim
 RUN rm -rf /var/cache/apk/* && \
     rm -rf /tmp/*
 
-WORKDIR /var/www/
+WORKDIR /var/www/app
 
 # TRY INSTALLING NPM PACKAGES GLOBALLY ON BUILD, THAN SYMLINK THE NODE_MODULES IN PROJECT DIR ON RUN "build_script"
 # DONT FORGET TO INCLUDE CONFIG FILES IN DOCKERFILE

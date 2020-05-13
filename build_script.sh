@@ -1,8 +1,6 @@
 #!/bin/sh
 # If any commands fail (exit code other than 0) entire script exits
-
-ls -la
-
+cd ../
 ln -s node_packages/node_modules app/node_modules
 ln -s composer_packages/vendor app/vendor
 

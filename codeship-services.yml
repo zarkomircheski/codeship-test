@@ -4,5 +4,5 @@ codeship-example-php:
     context: ./
     dockerfile: codeship-dockerfile/Dockerfile
   volumes:
-    - ./:/var/www/
+    - ./:/var/www/app/
   cached: true
