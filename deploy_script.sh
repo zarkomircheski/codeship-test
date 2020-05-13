@@ -22,3 +22,5 @@ git add --all
 git commit -am "Deployment to $REPO by $CI_COMMITTER_NAME from $CI_NAME"
 
 git push ${REPO} master
+
+git remote rm ${REPO}

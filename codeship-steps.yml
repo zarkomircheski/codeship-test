@@ -1,12 +1,9 @@
 - name: codeship-build
   service: codeship-example-php
-  command: "./build_script.sh"
-- name: test-phpcs
+  command: "./app/build_script.sh"
+- name: codeship-test
   service: codeship-example-php
-  command: php ./vendor/bin/phpcs --standard=phpcs.xml
-- name: test-lint-js
-  service: codeship-example-php
-  command: npm run lint-js -- --fix --quiet
+  command: "./app/test_script.sh"
 - name:  codeship-deploy
   service: codeship-example-php
   command: "./deploy_script.sh"
