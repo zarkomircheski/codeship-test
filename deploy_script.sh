@@ -1,6 +1,6 @@
 #!/bin/sh
-# If any commands fail (exit code other than 0) entire script exits
 
+#to app root
 cd app
 
 #push to repo

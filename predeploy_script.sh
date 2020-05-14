@@ -1,6 +1,7 @@
 #!/bin/sh
 
+#to app root
 cd app
-# run gulp tasks
 
+# Run gulp tasks (css and js compiling)
 npx gulp prod
