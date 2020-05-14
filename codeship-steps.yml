@@ -4,6 +4,9 @@
 - name: codeship-test
   service: codeship-example-php
   command: "./app/test_script.sh"
+- name:  codeship-pre-deploy
+  service: codeship-example-php
+  command: "./app/predeploy_script.sh"
 - name:  codeship-deploy
   service: codeship-example-php
   command: "./app/deploy_script.sh"

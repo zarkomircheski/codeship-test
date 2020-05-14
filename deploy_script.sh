@@ -1,10 +1,7 @@
 #!/bin/sh
 # If any commands fail (exit code other than 0) entire script exits
-# set -e
 
 cd app
-# run gulp tasks
-npx gulp prod
 
 #push to repo
 
